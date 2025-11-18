@@ -7,3 +7,29 @@ Brandon Byrne
 Vishal Garimella   
 Sravanthi Machcha  
 Yuxin Zhang  
+
+## How to Run
+
+This repo contains three main entrypoints:
+
+- `src/ms4_analysis.py` — compute regime transition stats, returns, breadth vs BTC, cluster characterization, and a logistic-regression "predictive gauge".
+- `src/ms5_benchmark.py` — run `ms4_analysis` under multiple Spark configurations and record per-step timings.
+- `src/ms6_make_figures.py` — generate all final figures (PNG) from the MS4/MS5 outputs.
+
+All scripts are designed to run with `python -m src.<module>` so they can be reused as a package.
+
+---
+
+## 1. Setup
+
+Tested with:
+
+- Python 3.10
+- PySpark 3.x
+
+Install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
