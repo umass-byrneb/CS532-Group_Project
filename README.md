@@ -23,7 +23,7 @@ All scripts are designed to run with `python -m src.<module>` so they can be reu
 Tested with:
 
 - Python 3.10
-- PySpark 3.x
+- PySpark 3.12.3
 
 Install dependencies:
 
@@ -69,3 +69,4 @@ Experiments:
 - G1 — Whole-stage codegen OFF.
 - C1 — No caching inside ms4_analysis.
 - X5/X10 — Scale dataset 5× / 10× by replicating symbols.
+
