@@ -18,9 +18,7 @@ This repo contains three main entrypoints:
 
 All scripts are designed to run with `python -m src.<module>` so they can be reused as a package.
 
----
-
-## 1. Setup
+# Setup
 
 Tested with:
 
@@ -33,3 +31,41 @@ Install dependencies:
 python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
+
+# Running The Pipeline
+Main Analysis
+```bash
+python -m src.ms4_analysis \
+  --predictions_path artifacts/ms4/predictions.parquet \
+  --features_ml_path artifacts/features_ml_daily \
+  --out_dir artifacts/ms4b \
+  --steps 1,2,3,4,5,6,7
+```
+Spark benchmarks
+```bash
+python -m src.ms5_benchmark \
+  --predictions_path artifacts/ms4/predictions.parquet \
+  --features_ml_path artifacts/features_ml_daily \
+  --out_dir artifacts/ms5 \
+  --experiments B0,S1,S2,A1,J1,R1,G1,C1,X5,X10 \
+  --steps 1,2,3,4,5,6,7 \
+  --repeats 1
+```
+
+This runs ms4_analysis multiple times with different Spark configs and records:
+- Per-run metrics: artifacts/ms5/<EXP>/run_1/metrics.json
+- Per-step timings: artifacts/ms5/<EXP>/run_1/_timings.jsonl
+- Aggregated CSVs: artifacts/ms5/summary.csv, summary_agg.csv
+- JSON lines with all run metrics: artifacts/ms5/summary.jsonl
+
+Experiments:
+- B0 — Baseline: local[*], Adaptive Query Execution (AQE) ON, shuffle.partitions=200, broadcast join threshold 10MB, Kryo serializer.
+- S1 — Shuffle partitions ↓ to 32.
+- S2 — Shuffle partitions ↑ to 800.
+- A1 — AQE OFF (adaptive planning disabled).
+- J1 — Broadcast join OFF.
+- R1 — Java serializer instead of Kryo.
+- G1 — Whole-stage codegen OFF.
+- C1 — No caching inside ms4_analysis.
+- X5/X10 — Scale dataset 5× / 10× by replicating symbols.
