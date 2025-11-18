@@ -1,0 +1,521 @@
+symbol,regime,num_runs,mean_len,p50_len,p90_len,max_len
+AAVE,Blow-off rally / parabolic,32,1.21875,1,2,3
+AAVE,Bull impulse,8,2.625,2,5,5
+AAVE,Calm / normal,13,1.6923076923076923,2,3,3
+AAVE,Choppy high-vol sideways,54,2.240740740740741,2,4,9
+AAVE,Sell-off / drawdown,45,1.3111111111111111,1,2,3
+AAVE_x1,Blow-off rally / parabolic,32,1.21875,1,2,3
+AAVE_x1,Bull impulse,8,2.625,2,5,5
+AAVE_x1,Calm / normal,13,1.6923076923076923,2,3,3
+AAVE_x1,Choppy high-vol sideways,54,2.240740740740741,2,4,9
+AAVE_x1,Sell-off / drawdown,45,1.3111111111111111,1,2,3
+AAVE_x2,Blow-off rally / parabolic,32,1.21875,1,2,3
+AAVE_x2,Bull impulse,8,2.625,2,5,5
+AAVE_x2,Calm / normal,13,1.6923076923076923,2,3,3
+AAVE_x2,Choppy high-vol sideways,54,2.240740740740741,2,4,9
+AAVE_x2,Sell-off / drawdown,45,1.3111111111111111,1,2,3
+AAVE_x3,Blow-off rally / parabolic,32,1.21875,1,2,3
+AAVE_x3,Bull impulse,8,2.625,2,5,5
+AAVE_x3,Calm / normal,13,1.6923076923076923,2,3,3
+AAVE_x3,Choppy high-vol sideways,54,2.240740740740741,2,4,9
+AAVE_x3,Sell-off / drawdown,45,1.3111111111111111,1,2,3
+AAVE_x4,Blow-off rally / parabolic,32,1.21875,1,2,3
+AAVE_x4,Bull impulse,8,2.625,2,5,5
+AAVE_x4,Calm / normal,13,1.6923076923076923,2,3,3
+AAVE_x4,Choppy high-vol sideways,54,2.240740740740741,2,4,9
+AAVE_x4,Sell-off / drawdown,45,1.3111111111111111,1,2,3
+ADA,Blow-off rally / parabolic,166,1.2650602409638554,1,2,5
+ADA,Bull impulse,11,3.8181818181818183,1,9,9
+ADA,Calm / normal,154,3.2142857142857144,2,7,26
+ADA,Choppy high-vol sideways,148,2.472972972972973,2,5,14
+ADA,Sell-off / drawdown,191,1.2984293193717278,1,2,6
+ADA_x1,Blow-off rally / parabolic,166,1.2650602409638554,1,2,5
+ADA_x1,Bull impulse,11,3.8181818181818183,1,9,9
+ADA_x1,Calm / normal,154,3.2142857142857144,2,7,26
+ADA_x1,Choppy high-vol sideways,148,2.472972972972973,2,5,14
+ADA_x1,Sell-off / drawdown,191,1.2984293193717278,1,2,6
+ADA_x2,Blow-off rally / parabolic,166,1.2650602409638554,1,2,5
+ADA_x2,Bull impulse,11,3.8181818181818183,1,9,9
+ADA_x2,Calm / normal,154,3.2142857142857144,2,7,26
+ADA_x2,Choppy high-vol sideways,148,2.472972972972973,2,5,14
+ADA_x2,Sell-off / drawdown,191,1.2984293193717278,1,2,6
+ADA_x3,Blow-off rally / parabolic,166,1.2650602409638554,1,2,5
+ADA_x3,Bull impulse,11,3.8181818181818183,1,9,9
+ADA_x3,Calm / normal,154,3.2142857142857144,2,7,26
+ADA_x3,Choppy high-vol sideways,148,2.472972972972973,2,5,14
+ADA_x3,Sell-off / drawdown,191,1.2984293193717278,1,2,6
+ADA_x4,Blow-off rally / parabolic,166,1.2650602409638554,1,2,5
+ADA_x4,Bull impulse,11,3.8181818181818183,1,9,9
+ADA_x4,Calm / normal,154,3.2142857142857144,2,7,26
+ADA_x4,Choppy high-vol sideways,148,2.472972972972973,2,5,14
+ADA_x4,Sell-off / drawdown,191,1.2984293193717278,1,2,6
+ATOM,Blow-off rally / parabolic,109,1.2201834862385321,1,2,4
+ATOM,Bull impulse,7,1.7142857142857142,1,3,3
+ATOM,Calm / normal,81,3.1481481481481484,2,7,18
+ATOM,Choppy high-vol sideways,108,2.537037037037037,2,6,7
+ATOM,Sell-off / drawdown,121,1.3057851239669422,1,2,4
+ATOM_x1,Blow-off rally / parabolic,109,1.2201834862385321,1,2,4
+ATOM_x1,Bull impulse,7,1.7142857142857142,1,3,3
+ATOM_x1,Calm / normal,81,3.1481481481481484,2,7,18
+ATOM_x1,Choppy high-vol sideways,108,2.537037037037037,2,6,7
+ATOM_x1,Sell-off / drawdown,121,1.3057851239669422,1,2,4
+ATOM_x2,Blow-off rally / parabolic,109,1.2201834862385321,1,2,4
+ATOM_x2,Bull impulse,7,1.7142857142857142,1,3,3
+ATOM_x2,Calm / normal,81,3.1481481481481484,2,7,18
+ATOM_x2,Choppy high-vol sideways,108,2.537037037037037,2,6,7
+ATOM_x2,Sell-off / drawdown,121,1.3057851239669422,1,2,4
+ATOM_x3,Blow-off rally / parabolic,109,1.2201834862385321,1,2,4
+ATOM_x3,Bull impulse,7,1.7142857142857142,1,3,3
+ATOM_x3,Calm / normal,81,3.1481481481481484,2,7,18
+ATOM_x3,Choppy high-vol sideways,108,2.537037037037037,2,6,7
+ATOM_x3,Sell-off / drawdown,121,1.3057851239669422,1,2,4
+ATOM_x4,Blow-off rally / parabolic,109,1.2201834862385321,1,2,4
+ATOM_x4,Bull impulse,7,1.7142857142857142,1,3,3
+ATOM_x4,Calm / normal,81,3.1481481481481484,2,7,18
+ATOM_x4,Choppy high-vol sideways,108,2.537037037037037,2,6,7
+ATOM_x4,Sell-off / drawdown,121,1.3057851239669422,1,2,4
+BNB,Blow-off rally / parabolic,162,1.2407407407407407,1,2,4
+BNB,Bull impulse,13,4.461538461538462,3,7,18
+BNB,Calm / normal,155,4.258064516129032,2,12,24
+BNB,Choppy high-vol sideways,120,2.625,2,5,9
+BNB,Sell-off / drawdown,157,1.2420382165605095,1,2,4
+BNB_x1,Blow-off rally / parabolic,162,1.2407407407407407,1,2,4
+BNB_x1,Bull impulse,13,4.461538461538462,3,7,18
+BNB_x1,Calm / normal,155,4.258064516129032,2,12,24
+BNB_x1,Choppy high-vol sideways,120,2.625,2,5,9
+BNB_x1,Sell-off / drawdown,157,1.2420382165605095,1,2,4
+BNB_x2,Blow-off rally / parabolic,162,1.2407407407407407,1,2,4
+BNB_x2,Bull impulse,13,4.461538461538462,3,7,18
+BNB_x2,Calm / normal,155,4.258064516129032,2,12,24
+BNB_x2,Choppy high-vol sideways,120,2.625,2,5,9
+BNB_x2,Sell-off / drawdown,157,1.2420382165605095,1,2,4
+BNB_x3,Blow-off rally / parabolic,162,1.2407407407407407,1,2,4
+BNB_x3,Bull impulse,13,4.461538461538462,3,7,18
+BNB_x3,Calm / normal,155,4.258064516129032,2,12,24
+BNB_x3,Choppy high-vol sideways,120,2.625,2,5,9
+BNB_x3,Sell-off / drawdown,157,1.2420382165605095,1,2,4
+BNB_x4,Blow-off rally / parabolic,162,1.2407407407407407,1,2,4
+BNB_x4,Bull impulse,13,4.461538461538462,3,7,18
+BNB_x4,Calm / normal,155,4.258064516129032,2,12,24
+BNB_x4,Choppy high-vol sideways,120,2.625,2,5,9
+BNB_x4,Sell-off / drawdown,157,1.2420382165605095,1,2,4
+BTC,Blow-off rally / parabolic,289,1.193771626297578,1,2,4
+BTC,Bull impulse,5,2.6,1,6,6
+BTC,Calm / normal,401,5.720698254364089,3,13,46
+BTC,Choppy high-vol sideways,39,1.794871794871795,1,4,5
+BTC,Sell-off / drawdown,214,1.1962616822429906,1,2,4
+BTC_x1,Blow-off rally / parabolic,289,1.193771626297578,1,2,4
+BTC_x1,Bull impulse,5,2.6,1,6,6
+BTC_x1,Calm / normal,401,5.720698254364089,3,13,46
+BTC_x1,Choppy high-vol sideways,39,1.794871794871795,1,4,5
+BTC_x1,Sell-off / drawdown,214,1.1962616822429906,1,2,4
+BTC_x2,Blow-off rally / parabolic,289,1.193771626297578,1,2,4
+BTC_x2,Bull impulse,5,2.6,1,6,6
+BTC_x2,Calm / normal,401,5.720698254364089,3,13,46
+BTC_x2,Choppy high-vol sideways,39,1.794871794871795,1,4,5
+BTC_x2,Sell-off / drawdown,214,1.1962616822429906,1,2,4
+BTC_x3,Blow-off rally / parabolic,289,1.193771626297578,1,2,4
+BTC_x3,Bull impulse,5,2.6,1,6,6
+BTC_x3,Calm / normal,401,5.720698254364089,3,13,46
+BTC_x3,Choppy high-vol sideways,39,1.794871794871795,1,4,5
+BTC_x3,Sell-off / drawdown,214,1.1962616822429906,1,2,4
+BTC_x4,Blow-off rally / parabolic,289,1.193771626297578,1,2,4
+BTC_x4,Bull impulse,5,2.6,1,6,6
+BTC_x4,Calm / normal,401,5.720698254364089,3,13,46
+BTC_x4,Choppy high-vol sideways,39,1.794871794871795,1,4,5
+BTC_x4,Sell-off / drawdown,214,1.1962616822429906,1,2,4
+CRO,Blow-off rally / parabolic,114,1.1228070175438596,1,2,3
+CRO,Bull impulse,4,4.0,2,8,8
+CRO,Calm / normal,113,4.371681415929204,3,9,32
+CRO,Choppy high-vol sideways,65,2.3230769230769233,2,5,9
+CRO,Sell-off / drawdown,107,1.2429906542056075,1,2,3
+CRO_x1,Blow-off rally / parabolic,114,1.1228070175438596,1,2,3
+CRO_x1,Bull impulse,4,4.0,2,8,8
+CRO_x1,Calm / normal,113,4.371681415929204,3,9,32
+CRO_x1,Choppy high-vol sideways,65,2.3230769230769233,2,5,9
+CRO_x1,Sell-off / drawdown,107,1.2429906542056075,1,2,3
+CRO_x2,Blow-off rally / parabolic,114,1.1228070175438596,1,2,3
+CRO_x2,Bull impulse,4,4.0,2,8,8
+CRO_x2,Calm / normal,113,4.371681415929204,3,9,32
+CRO_x2,Choppy high-vol sideways,65,2.3230769230769233,2,5,9
+CRO_x2,Sell-off / drawdown,107,1.2429906542056075,1,2,3
+CRO_x3,Blow-off rally / parabolic,114,1.1228070175438596,1,2,3
+CRO_x3,Bull impulse,4,4.0,2,8,8
+CRO_x3,Calm / normal,113,4.371681415929204,3,9,32
+CRO_x3,Choppy high-vol sideways,65,2.3230769230769233,2,5,9
+CRO_x3,Sell-off / drawdown,107,1.2429906542056075,1,2,3
+CRO_x4,Blow-off rally / parabolic,114,1.1228070175438596,1,2,3
+CRO_x4,Bull impulse,4,4.0,2,8,8
+CRO_x4,Calm / normal,113,4.371681415929204,3,9,32
+CRO_x4,Choppy high-vol sideways,65,2.3230769230769233,2,5,9
+CRO_x4,Sell-off / drawdown,107,1.2429906542056075,1,2,3
+DOGE,Blow-off rally / parabolic,227,1.2290748898678414,1,2,6
+DOGE,Bull impulse,33,2.9393939393939394,2,6,9
+DOGE,Calm / normal,250,5.732,3,14,37
+DOGE,Choppy high-vol sideways,184,3.2065217391304346,2,7,13
+DOGE,Sell-off / drawdown,256,1.30859375,1,2,4
+DOGE_x1,Blow-off rally / parabolic,227,1.2290748898678414,1,2,6
+DOGE_x1,Bull impulse,33,2.9393939393939394,2,6,9
+DOGE_x1,Calm / normal,250,5.732,3,14,37
+DOGE_x1,Choppy high-vol sideways,184,3.2065217391304346,2,7,13
+DOGE_x1,Sell-off / drawdown,256,1.30859375,1,2,4
+DOGE_x2,Blow-off rally / parabolic,227,1.2290748898678414,1,2,6
+DOGE_x2,Bull impulse,33,2.9393939393939394,2,6,9
+DOGE_x2,Calm / normal,250,5.732,3,14,37
+DOGE_x2,Choppy high-vol sideways,184,3.2065217391304346,2,7,13
+DOGE_x2,Sell-off / drawdown,256,1.30859375,1,2,4
+DOGE_x3,Blow-off rally / parabolic,227,1.2290748898678414,1,2,6
+DOGE_x3,Bull impulse,33,2.9393939393939394,2,6,9
+DOGE_x3,Calm / normal,250,5.732,3,14,37
+DOGE_x3,Choppy high-vol sideways,184,3.2065217391304346,2,7,13
+DOGE_x3,Sell-off / drawdown,256,1.30859375,1,2,4
+DOGE_x4,Blow-off rally / parabolic,227,1.2290748898678414,1,2,6
+DOGE_x4,Bull impulse,33,2.9393939393939394,2,6,9
+DOGE_x4,Calm / normal,250,5.732,3,14,37
+DOGE_x4,Choppy high-vol sideways,184,3.2065217391304346,2,7,13
+DOGE_x4,Sell-off / drawdown,256,1.30859375,1,2,4
+DOT,Blow-off rally / parabolic,39,1.1025641025641026,1,2,2
+DOT,Bull impulse,8,1.375,1,3,3
+DOT,Calm / normal,37,2.2972972972972974,2,4,9
+DOT,Choppy high-vol sideways,41,2.7560975609756095,2,6,14
+DOT,Sell-off / drawdown,41,1.3414634146341464,1,2,3
+DOT_x1,Blow-off rally / parabolic,39,1.1025641025641026,1,2,2
+DOT_x1,Bull impulse,8,1.375,1,3,3
+DOT_x1,Calm / normal,37,2.2972972972972974,2,4,9
+DOT_x1,Choppy high-vol sideways,41,2.7560975609756095,2,6,14
+DOT_x1,Sell-off / drawdown,41,1.3414634146341464,1,2,3
+DOT_x2,Blow-off rally / parabolic,39,1.1025641025641026,1,2,2
+DOT_x2,Bull impulse,8,1.375,1,3,3
+DOT_x2,Calm / normal,37,2.2972972972972974,2,4,9
+DOT_x2,Choppy high-vol sideways,41,2.7560975609756095,2,6,14
+DOT_x2,Sell-off / drawdown,41,1.3414634146341464,1,2,3
+DOT_x3,Blow-off rally / parabolic,39,1.1025641025641026,1,2,2
+DOT_x3,Bull impulse,8,1.375,1,3,3
+DOT_x3,Calm / normal,37,2.2972972972972974,2,4,9
+DOT_x3,Choppy high-vol sideways,41,2.7560975609756095,2,6,14
+DOT_x3,Sell-off / drawdown,41,1.3414634146341464,1,2,3
+DOT_x4,Blow-off rally / parabolic,39,1.1025641025641026,1,2,2
+DOT_x4,Bull impulse,8,1.375,1,3,3
+DOT_x4,Calm / normal,37,2.2972972972972974,2,4,9
+DOT_x4,Choppy high-vol sideways,41,2.7560975609756095,2,6,14
+DOT_x4,Sell-off / drawdown,41,1.3414634146341464,1,2,3
+EOS,Blow-off rally / parabolic,155,1.167741935483871,1,2,3
+EOS,Bull impulse,16,2.4375,1,5,9
+EOS,Calm / normal,148,3.72972972972973,2,9,16
+EOS,Choppy high-vol sideways,153,2.8823529411764706,2,7,12
+EOS,Sell-off / drawdown,185,1.2972972972972974,1,2,6
+EOS_x1,Blow-off rally / parabolic,155,1.167741935483871,1,2,3
+EOS_x1,Bull impulse,16,2.4375,1,5,9
+EOS_x1,Calm / normal,148,3.72972972972973,2,9,16
+EOS_x1,Choppy high-vol sideways,153,2.8823529411764706,2,7,12
+EOS_x1,Sell-off / drawdown,185,1.2972972972972974,1,2,6
+EOS_x2,Blow-off rally / parabolic,155,1.167741935483871,1,2,3
+EOS_x2,Bull impulse,16,2.4375,1,5,9
+EOS_x2,Calm / normal,148,3.72972972972973,2,9,16
+EOS_x2,Choppy high-vol sideways,153,2.8823529411764706,2,7,12
+EOS_x2,Sell-off / drawdown,185,1.2972972972972974,1,2,6
+EOS_x3,Blow-off rally / parabolic,155,1.167741935483871,1,2,3
+EOS_x3,Bull impulse,16,2.4375,1,5,9
+EOS_x3,Calm / normal,148,3.72972972972973,2,9,16
+EOS_x3,Choppy high-vol sideways,153,2.8823529411764706,2,7,12
+EOS_x3,Sell-off / drawdown,185,1.2972972972972974,1,2,6
+EOS_x4,Blow-off rally / parabolic,155,1.167741935483871,1,2,3
+EOS_x4,Bull impulse,16,2.4375,1,5,9
+EOS_x4,Calm / normal,148,3.72972972972973,2,9,16
+EOS_x4,Choppy high-vol sideways,153,2.8823529411764706,2,7,12
+EOS_x4,Sell-off / drawdown,185,1.2972972972972974,1,2,6
+ETH,Blow-off rally / parabolic,273,1.2564102564102564,1,2,4
+ETH,Bull impulse,18,2.5,2,5,5
+ETH,Calm / normal,275,3.730909090909091,2,9,27
+ETH,Choppy high-vol sideways,174,2.4367816091954024,2,5,10
+ETH,Sell-off / drawdown,236,1.3093220338983051,1,2,6
+ETH_x1,Blow-off rally / parabolic,273,1.2564102564102564,1,2,4
+ETH_x1,Bull impulse,18,2.5,2,5,5
+ETH_x1,Calm / normal,275,3.730909090909091,2,9,27
+ETH_x1,Choppy high-vol sideways,174,2.4367816091954024,2,5,10
+ETH_x1,Sell-off / drawdown,236,1.3093220338983051,1,2,6
+ETH_x2,Blow-off rally / parabolic,273,1.2564102564102564,1,2,4
+ETH_x2,Bull impulse,18,2.5,2,5,5
+ETH_x2,Calm / normal,275,3.730909090909091,2,9,27
+ETH_x2,Choppy high-vol sideways,174,2.4367816091954024,2,5,10
+ETH_x2,Sell-off / drawdown,236,1.3093220338983051,1,2,6
+ETH_x3,Blow-off rally / parabolic,273,1.2564102564102564,1,2,4
+ETH_x3,Bull impulse,18,2.5,2,5,5
+ETH_x3,Calm / normal,275,3.730909090909091,2,9,27
+ETH_x3,Choppy high-vol sideways,174,2.4367816091954024,2,5,10
+ETH_x3,Sell-off / drawdown,236,1.3093220338983051,1,2,6
+ETH_x4,Blow-off rally / parabolic,273,1.2564102564102564,1,2,4
+ETH_x4,Bull impulse,18,2.5,2,5,5
+ETH_x4,Calm / normal,275,3.730909090909091,2,9,27
+ETH_x4,Choppy high-vol sideways,174,2.4367816091954024,2,5,10
+ETH_x4,Sell-off / drawdown,236,1.3093220338983051,1,2,6
+LINK,Blow-off rally / parabolic,169,1.2958579881656804,1,2,4
+LINK,Bull impulse,23,1.7391304347826086,1,4,6
+LINK,Calm / normal,112,2.9642857142857144,2,7,15
+LINK,Choppy high-vol sideways,200,2.61,2,5,14
+LINK,Sell-off / drawdown,203,1.2758620689655173,1,2,4
+LINK_x1,Blow-off rally / parabolic,169,1.2958579881656804,1,2,4
+LINK_x1,Bull impulse,23,1.7391304347826086,1,4,6
+LINK_x1,Calm / normal,112,2.9642857142857144,2,7,15
+LINK_x1,Choppy high-vol sideways,200,2.61,2,5,14
+LINK_x1,Sell-off / drawdown,203,1.2758620689655173,1,2,4
+LINK_x2,Blow-off rally / parabolic,169,1.2958579881656804,1,2,4
+LINK_x2,Bull impulse,23,1.7391304347826086,1,4,6
+LINK_x2,Calm / normal,112,2.9642857142857144,2,7,15
+LINK_x2,Choppy high-vol sideways,200,2.61,2,5,14
+LINK_x2,Sell-off / drawdown,203,1.2758620689655173,1,2,4
+LINK_x3,Blow-off rally / parabolic,169,1.2958579881656804,1,2,4
+LINK_x3,Bull impulse,23,1.7391304347826086,1,4,6
+LINK_x3,Calm / normal,112,2.9642857142857144,2,7,15
+LINK_x3,Choppy high-vol sideways,200,2.61,2,5,14
+LINK_x3,Sell-off / drawdown,203,1.2758620689655173,1,2,4
+LINK_x4,Blow-off rally / parabolic,169,1.2958579881656804,1,2,4
+LINK_x4,Bull impulse,23,1.7391304347826086,1,4,6
+LINK_x4,Calm / normal,112,2.9642857142857144,2,7,15
+LINK_x4,Choppy high-vol sideways,200,2.61,2,5,14
+LINK_x4,Sell-off / drawdown,203,1.2758620689655173,1,2,4
+LTC,Blow-off rally / parabolic,307,1.231270358306189,1,2,4
+LTC,Bull impulse,16,3.25,1,9,17
+LTC,Calm / normal,344,4.912790697674419,3,12,35
+LTC,Choppy high-vol sideways,195,2.41025641025641,2,5,15
+LTC,Sell-off / drawdown,305,1.2721311475409836,1,2,4
+LTC_x1,Blow-off rally / parabolic,307,1.231270358306189,1,2,4
+LTC_x1,Bull impulse,16,3.25,1,9,17
+LTC_x1,Calm / normal,344,4.912790697674419,3,12,35
+LTC_x1,Choppy high-vol sideways,195,2.41025641025641,2,5,15
+LTC_x1,Sell-off / drawdown,305,1.2721311475409836,1,2,4
+LTC_x2,Blow-off rally / parabolic,307,1.231270358306189,1,2,4
+LTC_x2,Bull impulse,16,3.25,1,9,17
+LTC_x2,Calm / normal,344,4.912790697674419,3,12,35
+LTC_x2,Choppy high-vol sideways,195,2.41025641025641,2,5,15
+LTC_x2,Sell-off / drawdown,305,1.2721311475409836,1,2,4
+LTC_x3,Blow-off rally / parabolic,307,1.231270358306189,1,2,4
+LTC_x3,Bull impulse,16,3.25,1,9,17
+LTC_x3,Calm / normal,344,4.912790697674419,3,12,35
+LTC_x3,Choppy high-vol sideways,195,2.41025641025641,2,5,15
+LTC_x3,Sell-off / drawdown,305,1.2721311475409836,1,2,4
+LTC_x4,Blow-off rally / parabolic,307,1.231270358306189,1,2,4
+LTC_x4,Bull impulse,16,3.25,1,9,17
+LTC_x4,Calm / normal,344,4.912790697674419,3,12,35
+LTC_x4,Choppy high-vol sideways,195,2.41025641025641,2,5,15
+LTC_x4,Sell-off / drawdown,305,1.2721311475409836,1,2,4
+MIOTA,Blow-off rally / parabolic,146,1.2534246575342465,1,2,4
+MIOTA,Bull impulse,15,2.933333333333333,2,7,14
+MIOTA,Calm / normal,125,4.296,3,9,26
+MIOTA,Choppy high-vol sideways,168,2.6845238095238093,2,6,14
+MIOTA,Sell-off / drawdown,193,1.3264248704663213,1,2,4
+MIOTA_x1,Blow-off rally / parabolic,146,1.2534246575342465,1,2,4
+MIOTA_x1,Bull impulse,15,2.933333333333333,2,7,14
+MIOTA_x1,Calm / normal,125,4.296,3,9,26
+MIOTA_x1,Choppy high-vol sideways,168,2.6845238095238093,2,6,14
+MIOTA_x1,Sell-off / drawdown,193,1.3264248704663213,1,2,4
+MIOTA_x2,Blow-off rally / parabolic,146,1.2534246575342465,1,2,4
+MIOTA_x2,Bull impulse,15,2.933333333333333,2,7,14
+MIOTA_x2,Calm / normal,125,4.296,3,9,26
+MIOTA_x2,Choppy high-vol sideways,168,2.6845238095238093,2,6,14
+MIOTA_x2,Sell-off / drawdown,193,1.3264248704663213,1,2,4
+MIOTA_x3,Blow-off rally / parabolic,146,1.2534246575342465,1,2,4
+MIOTA_x3,Bull impulse,15,2.933333333333333,2,7,14
+MIOTA_x3,Calm / normal,125,4.296,3,9,26
+MIOTA_x3,Choppy high-vol sideways,168,2.6845238095238093,2,6,14
+MIOTA_x3,Sell-off / drawdown,193,1.3264248704663213,1,2,4
+MIOTA_x4,Blow-off rally / parabolic,146,1.2534246575342465,1,2,4
+MIOTA_x4,Bull impulse,15,2.933333333333333,2,7,14
+MIOTA_x4,Calm / normal,125,4.296,3,9,26
+MIOTA_x4,Choppy high-vol sideways,168,2.6845238095238093,2,6,14
+MIOTA_x4,Sell-off / drawdown,193,1.3264248704663213,1,2,4
+SOL,Blow-off rally / parabolic,47,1.2340425531914894,1,2,4
+SOL,Bull impulse,15,2.2666666666666666,1,4,6
+SOL,Calm / normal,17,1.411764705882353,1,3,4
+SOL,Choppy high-vol sideways,78,3.2051282051282053,2,8,18
+SOL,Sell-off / drawdown,54,1.3518518518518519,1,2,3
+SOL_x1,Blow-off rally / parabolic,47,1.2340425531914894,1,2,4
+SOL_x1,Bull impulse,15,2.2666666666666666,1,4,6
+SOL_x1,Calm / normal,17,1.411764705882353,1,3,4
+SOL_x1,Choppy high-vol sideways,78,3.2051282051282053,2,8,18
+SOL_x1,Sell-off / drawdown,54,1.3518518518518519,1,2,3
+SOL_x2,Blow-off rally / parabolic,47,1.2340425531914894,1,2,4
+SOL_x2,Bull impulse,15,2.2666666666666666,1,4,6
+SOL_x2,Calm / normal,17,1.411764705882353,1,3,4
+SOL_x2,Choppy high-vol sideways,78,3.2051282051282053,2,8,18
+SOL_x2,Sell-off / drawdown,54,1.3518518518518519,1,2,3
+SOL_x3,Blow-off rally / parabolic,47,1.2340425531914894,1,2,4
+SOL_x3,Bull impulse,15,2.2666666666666666,1,4,6
+SOL_x3,Calm / normal,17,1.411764705882353,1,3,4
+SOL_x3,Choppy high-vol sideways,78,3.2051282051282053,2,8,18
+SOL_x3,Sell-off / drawdown,54,1.3518518518518519,1,2,3
+SOL_x4,Blow-off rally / parabolic,47,1.2340425531914894,1,2,4
+SOL_x4,Bull impulse,15,2.2666666666666666,1,4,6
+SOL_x4,Calm / normal,17,1.411764705882353,1,3,4
+SOL_x4,Choppy high-vol sideways,78,3.2051282051282053,2,8,18
+SOL_x4,Sell-off / drawdown,54,1.3518518518518519,1,2,3
+TRX,Blow-off rally / parabolic,139,1.3021582733812949,1,2,6
+TRX,Bull impulse,17,2.7058823529411766,1,8,17
+TRX,Calm / normal,123,4.2439024390243905,3,9,29
+TRX,Choppy high-vol sideways,162,2.4382716049382718,2,5,13
+TRX,Sell-off / drawdown,189,1.2433862433862435,1,2,6
+TRX_x1,Blow-off rally / parabolic,139,1.3021582733812949,1,2,6
+TRX_x1,Bull impulse,17,2.7058823529411766,1,8,17
+TRX_x1,Calm / normal,123,4.2439024390243905,3,9,29
+TRX_x1,Choppy high-vol sideways,162,2.4382716049382718,2,5,13
+TRX_x1,Sell-off / drawdown,189,1.2433862433862435,1,2,6
+TRX_x2,Blow-off rally / parabolic,139,1.3021582733812949,1,2,6
+TRX_x2,Bull impulse,17,2.7058823529411766,1,8,17
+TRX_x2,Calm / normal,123,4.2439024390243905,3,9,29
+TRX_x2,Choppy high-vol sideways,162,2.4382716049382718,2,5,13
+TRX_x2,Sell-off / drawdown,189,1.2433862433862435,1,2,6
+TRX_x3,Blow-off rally / parabolic,139,1.3021582733812949,1,2,6
+TRX_x3,Bull impulse,17,2.7058823529411766,1,8,17
+TRX_x3,Calm / normal,123,4.2439024390243905,3,9,29
+TRX_x3,Choppy high-vol sideways,162,2.4382716049382718,2,5,13
+TRX_x3,Sell-off / drawdown,189,1.2433862433862435,1,2,6
+TRX_x4,Blow-off rally / parabolic,139,1.3021582733812949,1,2,6
+TRX_x4,Bull impulse,17,2.7058823529411766,1,8,17
+TRX_x4,Calm / normal,123,4.2439024390243905,3,9,29
+TRX_x4,Choppy high-vol sideways,162,2.4382716049382718,2,5,13
+TRX_x4,Sell-off / drawdown,189,1.2433862433862435,1,2,6
+UNI,Blow-off rally / parabolic,34,1.1470588235294117,1,2,2
+UNI,Bull impulse,7,1.8571428571428572,1,5,5
+UNI,Calm / normal,8,1.625,1,3,3
+UNI,Choppy high-vol sideways,57,2.789473684210526,2,5,13
+UNI,Sell-off / drawdown,42,1.3095238095238095,1,2,4
+UNI_x1,Blow-off rally / parabolic,34,1.1470588235294117,1,2,2
+UNI_x1,Bull impulse,7,1.8571428571428572,1,5,5
+UNI_x1,Calm / normal,8,1.625,1,3,3
+UNI_x1,Choppy high-vol sideways,57,2.789473684210526,2,5,13
+UNI_x1,Sell-off / drawdown,42,1.3095238095238095,1,2,4
+UNI_x2,Blow-off rally / parabolic,34,1.1470588235294117,1,2,2
+UNI_x2,Bull impulse,7,1.8571428571428572,1,5,5
+UNI_x2,Calm / normal,8,1.625,1,3,3
+UNI_x2,Choppy high-vol sideways,57,2.789473684210526,2,5,13
+UNI_x2,Sell-off / drawdown,42,1.3095238095238095,1,2,4
+UNI_x3,Blow-off rally / parabolic,34,1.1470588235294117,1,2,2
+UNI_x3,Bull impulse,7,1.8571428571428572,1,5,5
+UNI_x3,Calm / normal,8,1.625,1,3,3
+UNI_x3,Choppy high-vol sideways,57,2.789473684210526,2,5,13
+UNI_x3,Sell-off / drawdown,42,1.3095238095238095,1,2,4
+UNI_x4,Blow-off rally / parabolic,34,1.1470588235294117,1,2,2
+UNI_x4,Bull impulse,7,1.8571428571428572,1,5,5
+UNI_x4,Calm / normal,8,1.625,1,3,3
+UNI_x4,Choppy high-vol sideways,57,2.789473684210526,2,5,13
+UNI_x4,Sell-off / drawdown,42,1.3095238095238095,1,2,4
+WBTC,Blow-off rally / parabolic,92,1.1195652173913044,1,1,3
+WBTC,Calm / normal,122,5.565573770491803,3,13,27
+WBTC,Choppy high-vol sideways,11,1.9090909090909092,2,3,4
+WBTC,Sell-off / drawdown,63,1.1428571428571428,1,2,3
+WBTC_x1,Blow-off rally / parabolic,92,1.1195652173913044,1,1,3
+WBTC_x1,Calm / normal,122,5.565573770491803,3,13,27
+WBTC_x1,Choppy high-vol sideways,11,1.9090909090909092,2,3,4
+WBTC_x1,Sell-off / drawdown,63,1.1428571428571428,1,2,3
+WBTC_x2,Blow-off rally / parabolic,92,1.1195652173913044,1,1,3
+WBTC_x2,Calm / normal,122,5.565573770491803,3,13,27
+WBTC_x2,Choppy high-vol sideways,11,1.9090909090909092,2,3,4
+WBTC_x2,Sell-off / drawdown,63,1.1428571428571428,1,2,3
+WBTC_x3,Blow-off rally / parabolic,92,1.1195652173913044,1,1,3
+WBTC_x3,Calm / normal,122,5.565573770491803,3,13,27
+WBTC_x3,Choppy high-vol sideways,11,1.9090909090909092,2,3,4
+WBTC_x3,Sell-off / drawdown,63,1.1428571428571428,1,2,3
+WBTC_x4,Blow-off rally / parabolic,92,1.1195652173913044,1,1,3
+WBTC_x4,Calm / normal,122,5.565573770491803,3,13,27
+WBTC_x4,Choppy high-vol sideways,11,1.9090909090909092,2,3,4
+WBTC_x4,Sell-off / drawdown,63,1.1428571428571428,1,2,3
+XEM,Blow-off rally / parabolic,235,1.2340425531914894,1,2,4
+XEM,Bull impulse,33,2.6666666666666665,2,7,11
+XEM,Calm / normal,195,3.9384615384615387,2,9,26
+XEM,Choppy high-vol sideways,251,2.8844621513944224,2,6,12
+XEM,Sell-off / drawdown,301,1.2524916943521596,1,2,5
+XEM_x1,Blow-off rally / parabolic,235,1.2340425531914894,1,2,4
+XEM_x1,Bull impulse,33,2.6666666666666665,2,7,11
+XEM_x1,Calm / normal,195,3.9384615384615387,2,9,26
+XEM_x1,Choppy high-vol sideways,251,2.8844621513944224,2,6,12
+XEM_x1,Sell-off / drawdown,301,1.2524916943521596,1,2,5
+XEM_x2,Blow-off rally / parabolic,235,1.2340425531914894,1,2,4
+XEM_x2,Bull impulse,33,2.6666666666666665,2,7,11
+XEM_x2,Calm / normal,195,3.9384615384615387,2,9,26
+XEM_x2,Choppy high-vol sideways,251,2.8844621513944224,2,6,12
+XEM_x2,Sell-off / drawdown,301,1.2524916943521596,1,2,5
+XEM_x3,Blow-off rally / parabolic,235,1.2340425531914894,1,2,4
+XEM_x3,Bull impulse,33,2.6666666666666665,2,7,11
+XEM_x3,Calm / normal,195,3.9384615384615387,2,9,26
+XEM_x3,Choppy high-vol sideways,251,2.8844621513944224,2,6,12
+XEM_x3,Sell-off / drawdown,301,1.2524916943521596,1,2,5
+XEM_x4,Blow-off rally / parabolic,235,1.2340425531914894,1,2,4
+XEM_x4,Bull impulse,33,2.6666666666666665,2,7,11
+XEM_x4,Calm / normal,195,3.9384615384615387,2,9,26
+XEM_x4,Choppy high-vol sideways,251,2.8844621513944224,2,6,12
+XEM_x4,Sell-off / drawdown,301,1.2524916943521596,1,2,5
+XLM,Blow-off rally / parabolic,259,1.2162162162162162,1,2,4
+XLM,Bull impulse,23,3.347826086956522,2,6,18
+XLM,Calm / normal,260,4.292307692307692,3,9,41
+XLM,Choppy high-vol sideways,223,2.7488789237668163,2,6,12
+XLM,Sell-off / drawdown,311,1.2636655948553055,1,2,4
+XLM_x1,Blow-off rally / parabolic,259,1.2162162162162162,1,2,4
+XLM_x1,Bull impulse,23,3.347826086956522,2,6,18
+XLM_x1,Calm / normal,260,4.292307692307692,3,9,41
+XLM_x1,Choppy high-vol sideways,223,2.7488789237668163,2,6,12
+XLM_x1,Sell-off / drawdown,311,1.2636655948553055,1,2,4
+XLM_x2,Blow-off rally / parabolic,259,1.2162162162162162,1,2,4
+XLM_x2,Bull impulse,23,3.347826086956522,2,6,18
+XLM_x2,Calm / normal,260,4.292307692307692,3,9,41
+XLM_x2,Choppy high-vol sideways,223,2.7488789237668163,2,6,12
+XLM_x2,Sell-off / drawdown,311,1.2636655948553055,1,2,4
+XLM_x3,Blow-off rally / parabolic,259,1.2162162162162162,1,2,4
+XLM_x3,Bull impulse,23,3.347826086956522,2,6,18
+XLM_x3,Calm / normal,260,4.292307692307692,3,9,41
+XLM_x3,Choppy high-vol sideways,223,2.7488789237668163,2,6,12
+XLM_x3,Sell-off / drawdown,311,1.2636655948553055,1,2,4
+XLM_x4,Blow-off rally / parabolic,259,1.2162162162162162,1,2,4
+XLM_x4,Bull impulse,23,3.347826086956522,2,6,18
+XLM_x4,Calm / normal,260,4.292307692307692,3,9,41
+XLM_x4,Choppy high-vol sideways,223,2.7488789237668163,2,6,12
+XLM_x4,Sell-off / drawdown,311,1.2636655948553055,1,2,4
+XMR,Blow-off rally / parabolic,308,1.2662337662337662,1,2,6
+XMR,Bull impulse,21,2.142857142857143,1,3,11
+XMR,Calm / normal,284,3.6901408450704225,2,8,44
+XMR,Choppy high-vol sideways,269,2.475836431226766,2,5,10
+XMR,Sell-off / drawdown,337,1.3056379821958457,1,2,5
+XMR_x1,Blow-off rally / parabolic,308,1.2662337662337662,1,2,6
+XMR_x1,Bull impulse,21,2.142857142857143,1,3,11
+XMR_x1,Calm / normal,284,3.6901408450704225,2,8,44
+XMR_x1,Choppy high-vol sideways,269,2.475836431226766,2,5,10
+XMR_x1,Sell-off / drawdown,337,1.3056379821958457,1,2,5
+XMR_x2,Blow-off rally / parabolic,308,1.2662337662337662,1,2,6
+XMR_x2,Bull impulse,21,2.142857142857143,1,3,11
+XMR_x2,Calm / normal,284,3.6901408450704225,2,8,44
+XMR_x2,Choppy high-vol sideways,269,2.475836431226766,2,5,10
+XMR_x2,Sell-off / drawdown,337,1.3056379821958457,1,2,5
+XMR_x3,Blow-off rally / parabolic,308,1.2662337662337662,1,2,6
+XMR_x3,Bull impulse,21,2.142857142857143,1,3,11
+XMR_x3,Calm / normal,284,3.6901408450704225,2,8,44
+XMR_x3,Choppy high-vol sideways,269,2.475836431226766,2,5,10
+XMR_x3,Sell-off / drawdown,337,1.3056379821958457,1,2,5
+XMR_x4,Blow-off rally / parabolic,308,1.2662337662337662,1,2,6
+XMR_x4,Bull impulse,21,2.142857142857143,1,3,11
+XMR_x4,Calm / normal,284,3.6901408450704225,2,8,44
+XMR_x4,Choppy high-vol sideways,269,2.475836431226766,2,5,10
+XMR_x4,Sell-off / drawdown,337,1.3056379821958457,1,2,5
+XRP,Blow-off rally / parabolic,241,1.2323651452282158,1,2,4
+XRP,Bull impulse,30,3.566666666666667,2,8,18
+XRP,Calm / normal,293,5.378839590443686,3,12,38
+XRP,Choppy high-vol sideways,197,2.6142131979695433,2,5,9
+XRP,Sell-off / drawdown,302,1.2748344370860927,1,2,6
+XRP_x1,Blow-off rally / parabolic,241,1.2323651452282158,1,2,4
+XRP_x1,Bull impulse,30,3.566666666666667,2,8,18
+XRP_x1,Calm / normal,293,5.378839590443686,3,12,38
+XRP_x1,Choppy high-vol sideways,197,2.6142131979695433,2,5,9
+XRP_x1,Sell-off / drawdown,302,1.2748344370860927,1,2,6
+XRP_x2,Blow-off rally / parabolic,241,1.2323651452282158,1,2,4
+XRP_x2,Bull impulse,30,3.566666666666667,2,8,18
+XRP_x2,Calm / normal,293,5.378839590443686,3,12,38
+XRP_x2,Choppy high-vol sideways,197,2.6142131979695433,2,5,9
+XRP_x2,Sell-off / drawdown,302,1.2748344370860927,1,2,6
+XRP_x3,Blow-off rally / parabolic,241,1.2323651452282158,1,2,4
+XRP_x3,Bull impulse,30,3.566666666666667,2,8,18
+XRP_x3,Calm / normal,293,5.378839590443686,3,12,38
+XRP_x3,Choppy high-vol sideways,197,2.6142131979695433,2,5,9
+XRP_x3,Sell-off / drawdown,302,1.2748344370860927,1,2,6
+XRP_x4,Blow-off rally / parabolic,241,1.2323651452282158,1,2,4
+XRP_x4,Bull impulse,30,3.566666666666667,2,8,18
+XRP_x4,Calm / normal,293,5.378839590443686,3,12,38
+XRP_x4,Choppy high-vol sideways,197,2.6142131979695433,2,5,9
+XRP_x4,Sell-off / drawdown,302,1.2748344370860927,1,2,6

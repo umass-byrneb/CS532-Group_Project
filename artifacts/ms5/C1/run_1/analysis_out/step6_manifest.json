@@ -1,0 +1,14 @@
+{
+  "generated_at": "2025-10-30T04:12:15.304194+00:00",
+  "num_features": 6,
+  "features": [
+    "ret_1d_w",
+    "zscore_7",
+    "ret_std_7",
+    "ret_std_30",
+    "ma_gap_7",
+    "ma_gap_30"
+  ],
+  "kmeans_k": 5,
+  "silhouette_overall": 0.5988388895427593
+}

@@ -1,0 +1,810 @@
+Final schema:
+root
+ |-- Date: date (nullable = true)
+ |-- symbol: string (nullable = true)
+ |-- cluster: integer (nullable = true)
+ |-- regime: string (nullable = true)
+
+
+MS4B Step1 — input summary: rows=334,480, symbols=210, span=2013-05-12 → 2021-07-06
+Symbols: AAVE, AAVE_x1, AAVE_x2, AAVE_x3, AAVE_x4, AAVE_x5, AAVE_x6, AAVE_x7, AAVE_x8, AAVE_x9, ADA, ADA_x1, ADA_x2, ADA_x3, ADA_x4, ADA_x5, ADA_x6, ADA_x7, ADA_x8, ADA_x9, ATOM, ATOM_x1, ATOM_x2, ATOM_x3, ATOM_x4, ATOM_x5, ATOM_x6, ATOM_x7, ATOM_x8, ATOM_x9, BNB, BNB_x1, BNB_x2, BNB_x3, BNB_x4, BNB_x5, BNB_x6, BNB_x7, BNB_x8, BNB_x9, BTC, BTC_x1, BTC_x2, BTC_x3, BTC_x4, BTC_x5, BTC_x6, BTC_x7, BTC_x8, BTC_x9, CRO, CRO_x1, CRO_x2, CRO_x3, CRO_x4, CRO_x5, CRO_x6, CRO_x7, CRO_x8, CRO_x9, DOGE, DOGE_x1, DOGE_x2, DOGE_x3, DOGE_x4, DOGE_x5, DOGE_x6, DOGE_x7, DOGE_x8, DOGE_x9, DOT, DOT_x1, DOT_x2, DOT_x3, DOT_x4, DOT_x5, DOT_x6, DOT_x7, DOT_x8, DOT_x9, EOS, EOS_x1, EOS_x2, EOS_x3, EOS_x4, EOS_x5, EOS_x6, EOS_x7, EOS_x8, EOS_x9, ETH, ETH_x1, ETH_x2, ETH_x3, ETH_x4, ETH_x5, ETH_x6, ETH_x7, ETH_x8, ETH_x9, LINK, LINK_x1, LINK_x2, LINK_x3, LINK_x4, LINK_x5, LINK_x6, LINK_x7, LINK_x8, LINK_x9, LTC, LTC_x1, LTC_x2, LTC_x3, LTC_x4, LTC_x5, LTC_x6, LTC_x7, LTC_x8, LTC_x9, MIOTA, MIOTA_x1, MIOTA_x2, MIOTA_x3, MIOTA_x4, MIOTA_x5, MIOTA_x6, MIOTA_x7, MIOTA_x8, MIOTA_x9, SOL, SOL_x1, SOL_x2, SOL_x3, SOL_x4, SOL_x5, SOL_x6, SOL_x7, SOL_x8, SOL_x9, TRX, TRX_x1, TRX_x2, TRX_x3, TRX_x4, TRX_x5, TRX_x6, TRX_x7, TRX_x8, TRX_x9, UNI, UNI_x1, UNI_x2, UNI_x3, UNI_x4, UNI_x5, UNI_x6, UNI_x7, UNI_x8, UNI_x9, WBTC, WBTC_x1, WBTC_x2, WBTC_x3, WBTC_x4, WBTC_x5, WBTC_x6, WBTC_x7, WBTC_x8, WBTC_x9, XEM, XEM_x1, XEM_x2, XEM_x3, XEM_x4, XEM_x5, XEM_x6, XEM_x7, XEM_x8, XEM_x9, XLM, XLM_x1, XLM_x2, XLM_x3, XLM_x4, XLM_x5, XLM_x6, XLM_x7, XLM_x8, XLM_x9, XMR, XMR_x1, XMR_x2, XMR_x3, XMR_x4, XMR_x5, XMR_x6, XMR_x7, XMR_x8, XMR_x9, XRP, XRP_x1, XRP_x2, XRP_x3, XRP_x4, XRP_x5, XRP_x6, XRP_x7, XRP_x8, XRP_x9
+
+Counts by regime:
++--------------------------+------+
+|regime                    |count |
++--------------------------+------+
+|Calm / normal             |156210|
+|Choppy high-vol sideways  |76510 |
+|Sell-off / drawdown       |49210 |
+|Blow-off rally / parabolic|43550 |
+|Bull impulse              |9000  |
++--------------------------+------+
+
+
+Event check — 2020-03-12:
++-------------------+-----+
+|regime             |count|
++-------------------+-----+
+|Sell-off / drawdown|170  |
++-------------------+-----+
+
+
+Per-coin distribution (top 3 per coin):
++-------+--------------------------+-----+
+|symbol |regime                    |count|
++-------+--------------------------+-----+
+|AAVE   |Choppy high-vol sideways  |121  |
+|AAVE   |Sell-off / drawdown       |59   |
+|AAVE   |Blow-off rally / parabolic|39   |
+|AAVE_x1|Choppy high-vol sideways  |121  |
+|AAVE_x1|Sell-off / drawdown       |59   |
+|AAVE_x1|Blow-off rally / parabolic|39   |
+|AAVE_x2|Choppy high-vol sideways  |121  |
+|AAVE_x2|Sell-off / drawdown       |59   |
+|AAVE_x2|Blow-off rally / parabolic|39   |
+|AAVE_x3|Choppy high-vol sideways  |121  |
+|AAVE_x3|Sell-off / drawdown       |59   |
+|AAVE_x3|Blow-off rally / parabolic|39   |
+|AAVE_x4|Choppy high-vol sideways  |121  |
+|AAVE_x4|Sell-off / drawdown       |59   |
+|AAVE_x4|Blow-off rally / parabolic|39   |
+|AAVE_x5|Choppy high-vol sideways  |121  |
+|AAVE_x5|Sell-off / drawdown       |59   |
+|AAVE_x5|Blow-off rally / parabolic|39   |
+|AAVE_x6|Choppy high-vol sideways  |121  |
+|AAVE_x6|Sell-off / drawdown       |59   |
+|AAVE_x6|Blow-off rally / parabolic|39   |
+|AAVE_x7|Choppy high-vol sideways  |121  |
+|AAVE_x7|Sell-off / drawdown       |59   |
+|AAVE_x7|Blow-off rally / parabolic|39   |
+|AAVE_x8|Choppy high-vol sideways  |121  |
+|AAVE_x8|Sell-off / drawdown       |59   |
+|AAVE_x8|Blow-off rally / parabolic|39   |
+|AAVE_x9|Choppy high-vol sideways  |121  |
+|AAVE_x9|Sell-off / drawdown       |59   |
+|AAVE_x9|Blow-off rally / parabolic|39   |
+|ADA    |Calm / normal             |495  |
+|ADA    |Choppy high-vol sideways  |366  |
+|ADA    |Sell-off / drawdown       |248  |
+|ADA_x1 |Calm / normal             |495  |
+|ADA_x1 |Choppy high-vol sideways  |366  |
+|ADA_x1 |Sell-off / drawdown       |248  |
+|ADA_x2 |Calm / normal             |495  |
+|ADA_x2 |Choppy high-vol sideways  |366  |
+|ADA_x2 |Sell-off / drawdown       |248  |
+|ADA_x3 |Calm / normal             |495  |
+|ADA_x3 |Choppy high-vol sideways  |366  |
+|ADA_x3 |Sell-off / drawdown       |248  |
+|ADA_x4 |Calm / normal             |495  |
+|ADA_x4 |Choppy high-vol sideways  |366  |
+|ADA_x4 |Sell-off / drawdown       |248  |
+|ADA_x5 |Calm / normal             |495  |
+|ADA_x5 |Choppy high-vol sideways  |366  |
+|ADA_x5 |Sell-off / drawdown       |248  |
+|ADA_x6 |Calm / normal             |495  |
+|ADA_x6 |Choppy high-vol sideways  |366  |
+|ADA_x6 |Sell-off / drawdown       |248  |
+|ADA_x7 |Calm / normal             |495  |
+|ADA_x7 |Choppy high-vol sideways  |366  |
+|ADA_x7 |Sell-off / drawdown       |248  |
+|ADA_x8 |Calm / normal             |495  |
+|ADA_x8 |Choppy high-vol sideways  |366  |
+|ADA_x8 |Sell-off / drawdown       |248  |
+|ADA_x9 |Calm / normal             |495  |
+|ADA_x9 |Choppy high-vol sideways  |366  |
+|ADA_x9 |Sell-off / drawdown       |248  |
+|ATOM   |Choppy high-vol sideways  |274  |
+|ATOM   |Calm / normal             |255  |
+|ATOM   |Sell-off / drawdown       |158  |
+|ATOM_x1|Choppy high-vol sideways  |274  |
+|ATOM_x1|Calm / normal             |255  |
+|ATOM_x1|Sell-off / drawdown       |158  |
+|ATOM_x2|Choppy high-vol sideways  |274  |
+|ATOM_x2|Calm / normal             |255  |
+|ATOM_x2|Sell-off / drawdown       |158  |
+|ATOM_x3|Choppy high-vol sideways  |274  |
+|ATOM_x3|Calm / normal             |255  |
+|ATOM_x3|Sell-off / drawdown       |158  |
+|ATOM_x4|Choppy high-vol sideways  |274  |
+|ATOM_x4|Calm / normal             |255  |
+|ATOM_x4|Sell-off / drawdown       |158  |
+|ATOM_x5|Choppy high-vol sideways  |274  |
+|ATOM_x5|Calm / normal             |255  |
+|ATOM_x5|Sell-off / drawdown       |158  |
+|ATOM_x6|Choppy high-vol sideways  |274  |
+|ATOM_x6|Calm / normal             |255  |
+|ATOM_x6|Sell-off / drawdown       |158  |
+|ATOM_x7|Choppy high-vol sideways  |274  |
+|ATOM_x7|Calm / normal             |255  |
+|ATOM_x7|Sell-off / drawdown       |158  |
+|ATOM_x8|Choppy high-vol sideways  |274  |
+|ATOM_x8|Calm / normal             |255  |
+|ATOM_x8|Sell-off / drawdown       |158  |
+|ATOM_x9|Choppy high-vol sideways  |274  |
+|ATOM_x9|Calm / normal             |255  |
+|ATOM_x9|Sell-off / drawdown       |158  |
+|BNB    |Calm / normal             |660  |
+|BNB    |Choppy high-vol sideways  |315  |
+|BNB    |Blow-off rally / parabolic|201  |
+|BNB_x1 |Calm / normal             |660  |
+|BNB_x1 |Choppy high-vol sideways  |315  |
+|BNB_x1 |Blow-off rally / parabolic|201  |
+|BNB_x2 |Calm / normal             |660  |
+|BNB_x2 |Choppy high-vol sideways  |315  |
+|BNB_x2 |Blow-off rally / parabolic|201  |
+|BNB_x3 |Calm / normal             |660  |
+|BNB_x3 |Choppy high-vol sideways  |315  |
+|BNB_x3 |Blow-off rally / parabolic|201  |
+|BNB_x4 |Calm / normal             |660  |
+|BNB_x4 |Choppy high-vol sideways  |315  |
+|BNB_x4 |Blow-off rally / parabolic|201  |
+|BNB_x5 |Calm / normal             |660  |
+|BNB_x5 |Choppy high-vol sideways  |315  |
+|BNB_x5 |Blow-off rally / parabolic|201  |
+|BNB_x6 |Calm / normal             |660  |
+|BNB_x6 |Choppy high-vol sideways  |315  |
+|BNB_x6 |Blow-off rally / parabolic|201  |
+|BNB_x7 |Calm / normal             |660  |
+|BNB_x7 |Choppy high-vol sideways  |315  |
+|BNB_x7 |Blow-off rally / parabolic|201  |
+|BNB_x8 |Calm / normal             |660  |
+|BNB_x8 |Choppy high-vol sideways  |315  |
+|BNB_x8 |Blow-off rally / parabolic|201  |
+|BNB_x9 |Calm / normal             |660  |
+|BNB_x9 |Choppy high-vol sideways  |315  |
+|BNB_x9 |Blow-off rally / parabolic|201  |
+|BTC    |Calm / normal             |2294 |
+|BTC    |Blow-off rally / parabolic|345  |
+|BTC    |Sell-off / drawdown       |256  |
+|BTC_x1 |Calm / normal             |2294 |
+|BTC_x1 |Blow-off rally / parabolic|345  |
+|BTC_x1 |Sell-off / drawdown       |256  |
+|BTC_x2 |Calm / normal             |2294 |
+|BTC_x2 |Blow-off rally / parabolic|345  |
+|BTC_x2 |Sell-off / drawdown       |256  |
+|BTC_x3 |Calm / normal             |2294 |
+|BTC_x3 |Blow-off rally / parabolic|345  |
+|BTC_x3 |Sell-off / drawdown       |256  |
+|BTC_x4 |Calm / normal             |2294 |
+|BTC_x4 |Blow-off rally / parabolic|345  |
+|BTC_x4 |Sell-off / drawdown       |256  |
+|BTC_x5 |Calm / normal             |2294 |
+|BTC_x5 |Blow-off rally / parabolic|345  |
+|BTC_x5 |Sell-off / drawdown       |256  |
+|BTC_x6 |Calm / normal             |2294 |
+|BTC_x6 |Blow-off rally / parabolic|345  |
+|BTC_x6 |Sell-off / drawdown       |256  |
+|BTC_x7 |Calm / normal             |2294 |
+|BTC_x7 |Blow-off rally / parabolic|345  |
+|BTC_x7 |Sell-off / drawdown       |256  |
+|BTC_x8 |Calm / normal             |2294 |
+|BTC_x8 |Blow-off rally / parabolic|345  |
+|BTC_x8 |Sell-off / drawdown       |256  |
+|BTC_x9 |Calm / normal             |2294 |
+|BTC_x9 |Blow-off rally / parabolic|345  |
+|BTC_x9 |Sell-off / drawdown       |256  |
+|CRO    |Calm / normal             |494  |
+|CRO    |Choppy high-vol sideways  |151  |
+|CRO    |Sell-off / drawdown       |133  |
+|CRO_x1 |Calm / normal             |494  |
+|CRO_x1 |Choppy high-vol sideways  |151  |
+|CRO_x1 |Sell-off / drawdown       |133  |
+|CRO_x2 |Calm / normal             |494  |
+|CRO_x2 |Choppy high-vol sideways  |151  |
+|CRO_x2 |Sell-off / drawdown       |133  |
+|CRO_x3 |Calm / normal             |494  |
+|CRO_x3 |Choppy high-vol sideways  |151  |
+|CRO_x3 |Sell-off / drawdown       |133  |
+|CRO_x4 |Calm / normal             |494  |
+|CRO_x4 |Choppy high-vol sideways  |151  |
+|CRO_x4 |Sell-off / drawdown       |133  |
+|CRO_x5 |Calm / normal             |494  |
+|CRO_x5 |Choppy high-vol sideways  |151  |
+|CRO_x5 |Sell-off / drawdown       |133  |
+|CRO_x6 |Calm / normal             |494  |
+|CRO_x6 |Choppy high-vol sideways  |151  |
+|CRO_x6 |Sell-off / drawdown       |133  |
+|CRO_x7 |Calm / normal             |494  |
+|CRO_x7 |Choppy high-vol sideways  |151  |
+|CRO_x7 |Sell-off / drawdown       |133  |
+|CRO_x8 |Calm / normal             |494  |
+|CRO_x8 |Choppy high-vol sideways  |151  |
+|CRO_x8 |Sell-off / drawdown       |133  |
+|CRO_x9 |Calm / normal             |494  |
+|CRO_x9 |Choppy high-vol sideways  |151  |
+|CRO_x9 |Sell-off / drawdown       |133  |
+|DOGE   |Calm / normal             |1433 |
+|DOGE   |Choppy high-vol sideways  |590  |
+|DOGE   |Sell-off / drawdown       |335  |
+|DOGE_x1|Calm / normal             |1433 |
+|DOGE_x1|Choppy high-vol sideways  |590  |
+|DOGE_x1|Sell-off / drawdown       |335  |
+|DOGE_x2|Calm / normal             |1433 |
+|DOGE_x2|Choppy high-vol sideways  |590  |
+|DOGE_x2|Sell-off / drawdown       |335  |
+|DOGE_x3|Calm / normal             |1433 |
+|DOGE_x3|Choppy high-vol sideways  |590  |
+|DOGE_x3|Sell-off / drawdown       |335  |
+|DOGE_x4|Calm / normal             |1433 |
+|DOGE_x4|Choppy high-vol sideways  |590  |
+|DOGE_x4|Sell-off / drawdown       |335  |
+|DOGE_x5|Calm / normal             |1433 |
+|DOGE_x5|Choppy high-vol sideways  |590  |
+|DOGE_x5|Sell-off / drawdown       |335  |
+|DOGE_x6|Calm / normal             |1433 |
+|DOGE_x6|Choppy high-vol sideways  |590  |
++-------+--------------------------+-----+
+only showing top 200 rows
+
+[TIMING] Step 1 'Step 1: Input & validation' completed in 2.09s → artifacts/ms5/X10/run_3/analysis_out/_timings.jsonl
+
+Top transitions by count:
+-------------------------
++--------------------------+--------------------------+------+
+|regime                    |regime_next               |count |
++--------------------------+--------------------------+------+
+|Calm / normal             |Calm / normal             |121090|
+|Choppy high-vol sideways  |Choppy high-vol sideways  |47450 |
+|Calm / normal             |Blow-off rally / parabolic|19360 |
+|Blow-off rally / parabolic|Calm / normal             |17430 |
+|Sell-off / drawdown       |Choppy high-vol sideways  |16230 |
+|Choppy high-vol sideways  |Sell-off / drawdown       |15500 |
+|Calm / normal             |Sell-off / drawdown       |15310 |
+|Sell-off / drawdown       |Calm / normal             |14290 |
+|Sell-off / drawdown       |Sell-off / drawdown       |10670 |
+|Blow-off rally / parabolic|Choppy high-vol sideways  |9870  |
+|Choppy high-vol sideways  |Blow-off rally / parabolic|8260  |
+|Blow-off rally / parabolic|Blow-off rally / parabolic|8120  |
+|Sell-off / drawdown       |Blow-off rally / parabolic|7800  |
+|Blow-off rally / parabolic|Sell-off / drawdown       |6890  |
+|Bull impulse              |Bull impulse              |5760  |
+|Choppy high-vol sideways  |Calm / normal             |3300  |
+|Bull impulse              |Choppy high-vol sideways  |2420  |
+|Choppy high-vol sideways  |Bull impulse              |1830  |
+|Blow-off rally / parabolic|Bull impulse              |1160  |
+|Bull impulse              |Sell-off / drawdown       |750   |
++--------------------------+--------------------------+------+
+only showing top 20 rows
+
+
+Transition probability matrix (rows sum ≈ 1.0):
+-----------------------------------------------
++--------------------------+---------------------+------------------------+-------------------+--------------------------+---------------------+
+|regime                    |Calm / normal        |Choppy high-vol sideways|Sell-off / drawdown|Blow-off rally / parabolic|Bull impulse         |
++--------------------------+---------------------+------------------------+-------------------+--------------------------+---------------------+
+|Blow-off rally / parabolic|0.4002296211251435   |0.22663605051664754     |0.1582089552238806 |0.18645235361653273       |0.02663605051664753  |
+|Bull impulse              |0.0055617352614015575|0.26918798665183535     |0.08342602892102335|0.0011123470522803114     |0.6407119021134594   |
+|Calm / normal             |0.7752737051027595   |0.001856712977783469    |0.09802164030987899|0.12395159741340675       |3.2012292720404634E-4|
+|Choppy high-vol sideways  |0.04320502749410841  |0.621235925634983       |0.20293270489656978|0.10814349306101073       |0.023959151610369208 |
+|Sell-off / drawdown       |0.29068348250610254  |0.33014646053702196     |0.21704637917005695|0.15866558177379983       |0.0034580960130187145|
++--------------------------+---------------------+------------------------+-------------------+--------------------------+---------------------+
+
+
+Row-sum check (should be ~1.0):
+-------------------------------
++--------------------------+------------------+
+|regime                    |row_sum           |
++--------------------------+------------------+
+|Calm / normal             |0.9994237787310328|
+|Blow-off rally / parabolic|0.998163030998852 |
+|Bull impulse              |1.0               |
+|Sell-off / drawdown       |1.0               |
+|Choppy high-vol sideways  |0.999476302697041 |
++--------------------------+------------------+
+
+
+Diagonal 'stay' probabilities:
+------------------------------
++--------------------------+-------------------+
+|regime                    |stay_prob          |
++--------------------------+-------------------+
+|Blow-off rally / parabolic|0.18645235361653273|
+|Bull impulse              |0.6407119021134594 |
+|Calm / normal             |0.7752737051027595 |
+|Choppy high-vol sideways  |0.621235925634983  |
+|Sell-off / drawdown       |0.21704637917005695|
++--------------------------+-------------------+
+
+
+Dwell-time stats (overall):
+---------------------------
++--------------------------+--------+------------------+-------+-------+-------+-------+
+|regime                    |num_runs|mean_len          |p50_len|p90_len|min_len|max_len|
++--------------------------+--------+------------------+-------+-------+-------+-------+
+|Blow-off rally / parabolic|35430   |1.2291843070843917|1      |2      |1      |6      |
+|Bull impulse              |3230    |2.7863777089783284|2      |6      |1      |18     |
+|Calm / normal             |35100   |4.450427350427351 |3      |10     |1      |46     |
+|Choppy high-vol sideways  |28970   |2.641007939247497 |2      |6      |1      |18     |
+|Sell-off / drawdown       |38530   |1.2771866078380483|1      |2      |1      |6      |
++--------------------------+--------+------------------+-------+-------+-------+-------+
+
+
+Dwell-time per symbol (sample 50 rows):
+---------------------------------------
++-------+--------------------------+--------+------------------+-------+-------+-------+
+|symbol |regime                    |num_runs|mean_len          |p50_len|p90_len|max_len|
++-------+--------------------------+--------+------------------+-------+-------+-------+
+|AAVE   |Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE   |Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE   |Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE   |Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE   |Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x1|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x1|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x1|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x1|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x1|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x2|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x2|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x2|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x2|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x2|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x3|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x3|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x3|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x3|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x3|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x4|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x4|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x4|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x4|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x4|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x5|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x5|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x5|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x5|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x5|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x6|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x6|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x6|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x6|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x6|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x7|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x7|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x7|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x7|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x7|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x8|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x8|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x8|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x8|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x8|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
+|AAVE_x9|Blow-off rally / parabolic|32      |1.21875           |1      |2      |3      |
+|AAVE_x9|Bull impulse              |8       |2.625             |2      |5      |5      |
+|AAVE_x9|Calm / normal             |13      |1.6923076923076923|2      |3      |3      |
+|AAVE_x9|Choppy high-vol sideways  |54      |2.240740740740741 |2      |4      |9      |
+|AAVE_x9|Sell-off / drawdown       |45      |1.3111111111111111|1      |2      |3      |
++-------+--------------------------+--------+------------------+-------+-------+-------+
+only showing top 50 rows
+
+
+sum equals total rows.
+[TIMING] Step 2 'Step 2: Transition stats' completed in 9.54s → artifacts/ms5/X10/run_3/analysis_out/_timings.jsonl
+
+MS4B Step3 — joined rows=334,480 (pred rows=334,480), null ret_1d_w=0
+
+Regime returns — overall (sorted by mean_ret desc):
+---------------------------------------------------
++--------------------------+------+----------------------+----------------------+-------------------+-------------------+--------------------+
+|regime                    |n     |mean_ret              |median_ret            |std_ret            |hit_rate           |sharpe_d            |
++--------------------------+------+----------------------+----------------------+-------------------+-------------------+--------------------+
+|Bull impulse              |9000  |0.08594528004729465   |0.11211835848958268   |0.08416132761460103|0.83               |1.0211968190528415  |
+|Blow-off rally / parabolic|43550 |0.0794846934144249    |0.06907318771053084   |0.03738638545116718|1.0                |2.1260331121938787  |
+|Choppy high-vol sideways  |76510 |0.005964359821769672  |0.003955281210964223  |0.0444070956525936 |0.5425434583714547 |0.13431096391509503 |
+|Calm / normal             |156210|-0.0012750734689526563|-0.0010247812399528655|0.01957861609863969|0.4796107803597721 |-0.06512582209736711|
+|Sell-off / drawdown       |49210 |-0.07836690905659546  |-0.07178172428431973  |0.03378598548635385|4.06421459053038E-4|-2.3195093447325323 |
++--------------------------+------+----------------------+----------------------+-------------------+-------------------+--------------------+
+
+
+Regime returns — per symbol (top rows by regime):
+-------------------------------------------------
++-------+--------------------------+---+-------------------+-------------------+--------------------+--------+------------------+
+|symbol |regime                    |n  |mean_ret           |median_ret         |std_ret             |hit_rate|sharpe_d          |
++-------+--------------------------+---+-------------------+-------------------+--------------------+--------+------------------+
+|UNI    |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x9 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x2 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x1 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x3 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x7 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x4 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x5 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x6 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|UNI_x8 |Blow-off rally / parabolic|39 |0.10191242392013519|0.10193271863320352|0.049550961600165665|1.0     |2.0567193981517904|
+|SOL_x5 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL    |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x8 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x1 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x3 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x2 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x4 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x9 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x6 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|SOL_x7 |Blow-off rally / parabolic|58 |0.10084316415655416|0.09016229651889096|0.04865443268965564 |1.0     |2.0726408382929167|
+|AAVE   |Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x3|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x2|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x1|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x4|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x5|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x7|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x6|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x8|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|AAVE_x9|Blow-off rally / parabolic|39 |0.09742387823926328|0.0801524818085051 |0.04464964961189123 |1.0     |2.1819628840562513|
+|DOT_x3 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x2 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT    |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x1 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x5 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x4 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x7 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x6 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x9 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|DOT_x8 |Blow-off rally / parabolic|43 |0.09109515984704711|0.08216510453216275|0.042395766506120744|1.0     |2.1486852899309077|
+|XEM_x1 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM    |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x5 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x2 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x8 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x4 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x9 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x3 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x7 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|XEM_x6 |Blow-off rally / parabolic|290|0.08869701766287039|0.07697975608006957|0.04456949161442814 |1.0     |1.9900836749539492|
+|LINK_x3|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK   |Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x5|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x1|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x6|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x2|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x8|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x4|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x9|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|LINK_x7|Blow-off rally / parabolic|219|0.08461950067705895|0.07824880496729303|0.03741369848054071 |1.0     |2.261725093045012 |
+|XLM_x1 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x2 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x3 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM    |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x8 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x4 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x9 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x5 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x6 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|XLM_x7 |Blow-off rally / parabolic|315|0.08428387923497037|0.07200661962390864|0.04147516974180597 |1.0     |2.032152725586419 |
+|DOGE_x1|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x2|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x4|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE   |Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x5|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x3|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x6|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x8|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x7|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|DOGE_x9|Blow-off rally / parabolic|279|0.0835693952330384 |0.06819617944990597|0.04583825308381675 |1.0     |1.8231365641319057|
+|EOS    |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x2 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x1 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x5 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x3 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x4 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x6 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x7 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x8 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|EOS_x9 |Blow-off rally / parabolic|181|0.08354757873473988|0.06989823986235866|0.04040127204349545 |1.0     |2.067944262863647 |
+|TRX_x3 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x2 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX    |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x6 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x1 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x4 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x8 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x5 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x7 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
+|TRX_x9 |Blow-off rally / parabolic|181|0.08349527450715796|0.07185439662672577|0.03925928350195938 |1.0     |2.126765112842439 |
++-------+--------------------------+---+-------------------+-------------------+--------------------+--------+------------------+
+only showing top 100 rows
+
+
+MS4B Step3 (FORWARD) — joined rows=334,270 (pred rows=334,480), null ret_fwd1=0
+
+Regime → next-day returns — overall (sorted by mean_ret_fwd1 desc):
+-------------------------------------------------------------------
++--------------------------+------+----------------------+----------------------+-------------------+-------------------+----------------------+
+|regime                    |n     |mean_ret_fwd1         |median_ret_fwd1       |std_ret_fwd1       |hit_rate_fwd1      |sharpe_d_fwd1         |
++--------------------------+------+----------------------+----------------------+-------------------+-------------------+----------------------+
+|Bull impulse              |9000  |0.011271624276491804  |-0.0012068012433910091|0.100550138891487  |0.49444444444444446|0.11209953960039837   |
+|Sell-off / drawdown       |49210 |0.006807391116103064  |0.00863385818921314   |0.06303530689564221|0.5681771997561471 |0.10799330488503858   |
+|Blow-off rally / parabolic|43470 |0.0032736689755989822 |-0.0040318206423908265|0.0599547689216138 |0.463768115942029  |0.05460231161726351   |
+|Calm / normal             |156120|4.6805786102039243E-4 |-1.1482461319456405E-4|0.03946846107635223|0.4984627209838586 |0.011859034992900499  |
+|Choppy high-vol sideways  |76470 |-2.1127517441138843E-4|-0.002131035282372906 |0.0673688879579938 |0.48398064600496926|-0.0031360941350720207|
++--------------------------+------+----------------------+----------------------+-------------------+-------------------+----------------------+
+
+
+Regime → next-day returns — per symbol (top rows by regime):
+------------------------------------------------------------
++-------+--------------------------+---+---------------------+----------------------+--------------------+-------------------+-------------------+
+|symbol |regime                    |n  |mean_ret_fwd1        |median_ret_fwd1       |std_ret_fwd1        |hit_rate_fwd1      |sharpe_d_fwd1      |
++-------+--------------------------+---+---------------------+----------------------+--------------------+-------------------+-------------------+
+|AAVE_x2|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x4|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE   |Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x9|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x1|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x3|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x7|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x5|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x6|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|AAVE_x8|Blow-off rally / parabolic|39 |0.03089848802197949  |0.029036865374727938  |0.08125039243883152 |0.6153846153846154 |0.3802872465538069 |
+|XRP_x1 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP    |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x3 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x5 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x6 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x2 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x7 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x4 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x8 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|XRP_x9 |Blow-off rally / parabolic|297|0.010520631329009359 |-0.0031827162984150448|0.06293761956160711 |0.4713804713804714 |0.1671596638431985 |
+|DOT_x3 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT    |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x4 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x2 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x1 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x7 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x6 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x5 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x9 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|DOT_x8 |Blow-off rally / parabolic|42 |0.009016439346787324 |0.0014036233844019197 |0.061675863645167806|0.5238095238095238 |0.14619072703481706|
+|ETH_x1 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x3 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x4 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH    |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x5 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x7 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x6 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x2 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x9 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|ETH_x8 |Blow-off rally / parabolic|342|0.00615754792168842  |-0.0013518261689684508|0.056322713127220696|0.4824561403508772 |0.10932619506059421|
+|LINK_x4|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x1|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK   |Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x3|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x8|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x2|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x9|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x5|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x6|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|LINK_x7|Blow-off rally / parabolic|218|0.005659662888978439 |-0.0027200474085221638|0.06506363874106946 |0.48623853211009177|0.08698657189312634|
+|SOL_x1 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL    |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x2 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x4 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x8 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x3 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x9 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x6 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x5 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|SOL_x7 |Blow-off rally / parabolic|57 |0.0053056361007093105|0.012038824596517755  |0.0819302816486847  |0.5614035087719298 |0.06475793801685883|
+|BTC_x4 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x2 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x9 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x5 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC    |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x7 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x1 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x3 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x6 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|BTC_x8 |Blow-off rally / parabolic|345|0.004728521256290522 |0.002087127436135816  |0.03891934490118097 |0.5478260869565217 |0.12149539691113967|
+|DOGE_x1|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x6|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x9|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x2|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x4|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x3|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE   |Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x5|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x8|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|DOGE_x7|Blow-off rally / parabolic|279|0.0045366308026828445|-0.0067985016007892085|0.06517184740365867 |0.41935483870967744|0.06961028394030401|
+|BNB    |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x3 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x2 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x1 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x5 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x4 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x6 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x7 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x8 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|BNB_x9 |Blow-off rally / parabolic|200|0.003674025777188583 |-0.0016222660046016912|0.05142521248789807 |0.48               |0.07144405631874043|
+|XMR_x1 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x6 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x7 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x4 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x2 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR    |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x3 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x5 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x8 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
+|XMR_x9 |Blow-off rally / parabolic|390|0.0035946382338580885|-0.0025914372856643553|0.059030588501066905|0.4794871794871795 |0.06089450105673806|
++-------+--------------------------+---+---------------------+----------------------+--------------------+-------------------+-------------------+
+only showing top 100 rows
+
+[TIMING] Step 3 'Step 3: Regime returns' completed in 7.72s → artifacts/ms5/X10/run_3/analysis_out/_timings.jsonl
+
+STEP 4 — Transition-conditioned forward returns
+-----------------------------------------------
+MS4B Step4 — rows_with_prev=334,060, transitions=140,870, stays=193,190
+Null ret_fwd1 within transitions: 0
+
+Top transitions by frequency (change points only):
++-----------------------------------------------------+-----+
+|transition                                           |count|
++-----------------------------------------------------+-----+
+|Calm / normal → Blow-off rally / parabolic           |19350|
+|Blow-off rally / parabolic → Calm / normal           |17430|
+|Sell-off / drawdown → Choppy high-vol sideways       |16240|
+|Choppy high-vol sideways → Sell-off / drawdown       |15530|
+|Calm / normal → Sell-off / drawdown                  |15310|
+|Sell-off / drawdown → Calm / normal                  |14240|
+|Blow-off rally / parabolic → Choppy high-vol sideways|9850 |
+|Choppy high-vol sideways → Blow-off rally / parabolic|8260 |
+|Sell-off / drawdown → Blow-off rally / parabolic     |7730 |
+|Blow-off rally / parabolic → Sell-off / drawdown     |6890 |
+|Choppy high-vol sideways → Calm / normal             |3300 |
+|Bull impulse → Choppy high-vol sideways              |2420 |
+|Choppy high-vol sideways → Bull impulse              |1840 |
+|Blow-off rally / parabolic → Bull impulse            |1160 |
+|Bull impulse → Sell-off / drawdown                   |750  |
+|Calm / normal → Choppy high-vol sideways             |290  |
+|Sell-off / drawdown → Bull impulse                   |170  |
+|Bull impulse → Calm / normal                         |50   |
+|Calm / normal → Bull impulse                         |50   |
+|Bull impulse → Blow-off rally / parabolic            |10   |
++-----------------------------------------------------+-----+
+
+
+Transition → next-day returns — overall (sorted by mean_ret_fwd1 desc):
++-----------------------------------------------------+-----+----------------------+----------------------+--------------------+-------------------+--------------------+
+|transition                                           |n    |mean_ret_fwd1         |median_ret_fwd1       |std_ret_fwd1        |hit_rate_fwd1      |sharpe_d_fwd1       |
++-----------------------------------------------------+-----+----------------------+----------------------+--------------------+-------------------+--------------------+
+|Calm / normal → Bull impulse                         |50   |0.12788102003280122   |0.12194444508392      |0.028752344222612712|1.0                |4.4476728242640915  |
+|Bull impulse → Blow-off rally / parabolic            |10   |0.12169844096592675   |0.12169844096592675   |0.0                 |1.0                |NULL                |
+|Bull impulse → Calm / normal                         |50   |0.04044178004509393   |0.045416120358946266  |0.09372274445865365 |0.6                |0.431504436609142   |
+|Choppy high-vol sideways → Bull impulse              |1840 |0.020054788546926643  |-0.005943063985260455 |0.0996739325628601  |0.4782608695652174 |0.2012039460194765  |
+|Bull impulse → Sell-off / drawdown                   |750  |0.017298062048182943  |0.012383311979662498  |0.08359675644889121 |0.5866666666666667 |0.20692264608087407 |
+|Calm / normal → Choppy high-vol sideways             |290  |0.012821379222115663  |0.007535391057477803  |0.04993572309844843 |0.5517241379310345 |0.2567576561740835  |
+|Bull impulse → Choppy high-vol sideways              |2420 |0.01076155135381595   |0.005530319499420955  |0.0860482299184616  |0.5289256198347108 |0.12506418044872605 |
+|Blow-off rally / parabolic → Bull impulse            |1160 |0.010188591837937855  |-0.004373746409938484 |0.09708679739694909 |0.5                |0.1049431242054548  |
+|Choppy high-vol sideways → Sell-off / drawdown       |15530|0.008354118743866356  |0.007454062082105306  |0.06774630961189242 |0.557630392788152  |0.12331474277677623 |
+|Choppy high-vol sideways → Calm / normal             |3300 |0.007965421799363473  |0.0030140360963422097 |0.0522890684051638  |0.5333333333333333 |0.1523343605520585  |
+|Choppy high-vol sideways → Blow-off rally / parabolic|8260 |0.0072407164996556575 |-0.003963702556361914 |0.07184588491321742 |0.48426150121065376|0.10078122787967206 |
+|Blow-off rally / parabolic → Calm / normal           |17430|0.004938726931616513  |0.0018600081530451007 |0.04218693640133289 |0.5272518646012622 |0.11706768381172317 |
+|Blow-off rally / parabolic → Choppy high-vol sideways|9850 |0.0036316149981628454 |9.03826137568009E-4   |0.0645267128745366  |0.5086294416243655 |0.05628079963137168 |
+|Calm / normal → Blow-off rally / parabolic           |19350|0.0035603834470209787 |-0.0020845666614994762|0.05031433809875697 |0.47390180878552973|0.07076280005974955 |
+|Sell-off / drawdown → Bull impulse                   |170  |0.001040258072843471  |-0.030789467431826867 |0.11463256498287287 |0.4117647058823529 |0.009074716883451878|
+|Calm / normal → Sell-off / drawdown                  |15310|4.582005974933172E-4  |0.006443301029174897  |0.052267867484729315|0.5558458523840627 |0.008766391657880169|
+|Blow-off rally / parabolic → Sell-off / drawdown     |6890 |4.114977055091381E-4  |0.002553156862969641  |0.056124158139058425|0.5166908563134979 |0.007331917647469619|
+|Sell-off / drawdown → Blow-off rally / parabolic     |7730 |2.861665226181815E-4  |-0.006568220246372047 |0.061742547817532904|0.44372574385511   |0.004634835016266034|
+|Sell-off / drawdown → Calm / normal                  |14240|-0.0046980065168987575|-0.0018672291845684974|0.048450542986865165|0.4768258426966292 |-0.09696499207805322|
+|Sell-off / drawdown → Choppy high-vol sideways       |16240|-0.008030557297834712 |-0.007037870979499594 |0.06958356093450156 |0.458128078817734  |-0.11540882918299927|
++-----------------------------------------------------+-----+----------------------+----------------------+--------------------+-------------------+--------------------+
+
+
+Stay vs Change (is_transition=1 means regime changed today → t+1 return):
++-------------+------+--------------------+---------------------+--------------------+-------------------+-------------------+
+|is_transition|n     |mean_ret_fwd1       |median_ret_fwd1      |std_ret_fwd1        |hit_rate_fwd1      |sharpe_d_fwd1      |
++-------------+------+--------------------+---------------------+--------------------+-------------------+-------------------+
+|true         |140870|0.002289992425208726|4.0141023243567275E-4|0.06018967767293854 |0.504152764960602  |0.03804626497008662|
+|false        |193190|0.001635342083878987|-1.332053482743234E-4|0.052089842722887685|0.49836948082198873|0.03139464429905903|
++-------------+------+--------------------+---------------------+--------------------+-------------------+-------------------+
+
+[TIMING] Step 4 'Step 4 — Transition-conditioned returns' completed in 6.16s → artifacts/ms5/X10/run_3/analysis_out/_timings.jsonl
+
+STEP 5 — Breadth series & BTC t+1 correlations
+----------------------------------------------
+
+Breadth sample (first 12 rows):
++----------+-------------+------------------------+-------------------+--------------------------+------------+----------+---------+-----------+----------+------------+---------+
+|Date      |Calm / normal|Choppy high-vol sideways|Sell-off / drawdown|Blow-off rally / parabolic|Bull impulse|total_syms|frac_calm|frac_choppy|frac_sello|frac_blowoff|frac_bull|
++----------+-------------+------------------------+-------------------+--------------------------+------------+----------+---------+-----------+----------+------------+---------+
+|2013-05-12|10           |0                       |10                 |0                         |0           |20        |0.5      |0.0        |0.5       |0.0         |0.0      |
+|2013-05-13|20           |0                       |0                  |0                         |0           |20        |1.0      |0.0        |0.0       |0.0         |0.0      |
+|2013-05-14|0            |0                       |20                 |0                         |0           |20        |0.0      |0.0        |1.0       |0.0         |0.0      |
+|2013-05-15|10           |10                      |0                  |0                         |0           |20        |0.5      |0.5        |0.0       |0.0         |0.0      |
+|2013-05-16|0            |10                      |0                  |10                        |0           |20        |0.0      |0.5        |0.0       |0.5         |0.0      |
+|2013-05-17|10           |0                       |0                  |10                        |0           |20        |0.5      |0.0        |0.0       |0.5         |0.0      |
+|2013-05-18|10           |10                      |0                  |0                         |0           |20        |0.5      |0.5        |0.0       |0.0         |0.0      |
+|2013-05-19|10           |10                      |0                  |0                         |0           |20        |0.5      |0.5        |0.0       |0.0         |0.0      |
+|2013-05-20|10           |10                      |0                  |0                         |0           |20        |0.5      |0.5        |0.0       |0.0         |0.0      |
+|2013-05-21|10           |10                      |0                  |0                         |0           |20        |0.5      |0.5        |0.0       |0.0         |0.0      |
+|2013-05-22|20           |0                       |0                  |0                         |0           |20        |1.0      |0.0        |0.0       |0.0         |0.0      |
+|2013-05-23|20           |0                       |0                  |0                         |0           |20        |1.0      |0.0        |0.0       |0.0         |0.0      |
++----------+-------------+------------------------+-------------------+--------------------------+------------+----------+---------+-----------+----------+------------+---------+
+only showing top 12 rows
+
+VALIDATION OK — per-date regime counts sum to total symbols.
+
+Correlations: frac_{regime} vs BTC t+1 return:
+  frac_calm     corr = -0.03975566565104035
+  frac_bull     corr = 0.03730056773018992
+  frac_sello    corr = 0.03291670807393895
+  frac_blowoff  corr = 0.0009606963197872376
+  frac_choppy   corr = 0.0007825013455020659
+[TIMING] Step 5 'Step 5 — Breadth series & BTC correlations' completed in 4.64s → artifacts/ms5/X10/run_3/analysis_out/_timings.jsonl
+
+Step 6 — Cluster characterization
+---------------------------------
+Numeric features used (6): ['ret_1d_w', 'zscore_7', 'ret_std_7', 'ret_std_30', 'ma_gap_7', 'ma_gap_30']
++-------+----------------------+--------------------+--------------------+--------------------+----------------------+----------------------+------+
+|cluster|avg_ret_1d_w          |avg_zscore_7        |avg_ret_std_7       |avg_ret_std_30      |avg_ma_gap_7          |avg_ma_gap_30         |n     |
++-------+----------------------+--------------------+--------------------+--------------------+----------------------+----------------------+------+
+|0      |0.0794846934144249    |2.147642027643036   |0.044018592835950804|0.05044368414876865 |0.07337236036900177   |0.09687985371236234   |43550 |
+|1      |-0.0012750734689526563|-0.05902995025087663|0.032202999081855754|0.03740072880079281 |-0.0010851259309378081|-0.0018490973987202635|156210|
+|2      |-0.07836690905659546  |-1.7465332964366085 |0.05336491989700171 |0.058905728431571776|-0.0820347053118587   |-0.08638440740617694  |49210 |
+|3      |0.005964359821769672  |0.037126116019919345|0.0783363639034621  |0.07413685911735901 |0.009702940457837225  |0.07444353501228929   |76510 |
+|4      |0.08594528004729465   |0.4552306623406284  |0.08897144089093273 |0.0782965356831526  |0.3567776452894843    |1.1963689563048299    |9000  |
++-------+----------------------+--------------------+--------------------+--------------------+----------------------+----------------------+------+
+
++--------------------------+----------------------+--------------------+--------------------+--------------------+----------------------+----------------------+------+
+|regime                    |avg_ret_1d_w          |avg_zscore_7        |avg_ret_std_7       |avg_ret_std_30      |avg_ma_gap_7          |avg_ma_gap_30         |n     |
++--------------------------+----------------------+--------------------+--------------------+--------------------+----------------------+----------------------+------+
+|Blow-off rally / parabolic|0.0794846934144249    |2.147642027643036   |0.044018592835950804|0.05044368414876865 |0.07337236036900177   |0.09687985371236234   |43550 |
+|Bull impulse              |0.08594528004729465   |0.4552306623406284  |0.08897144089093273 |0.0782965356831526  |0.3567776452894843    |1.1963689563048299    |9000  |
+|Calm / normal             |-0.0012750734689526563|-0.05902995025087663|0.032202999081855754|0.03740072880079281 |-0.0010851259309378081|-0.0018490973987202635|156210|
+|Choppy high-vol sideways  |0.005964359821769672  |0.037126116019919345|0.0783363639034621  |0.07413685911735901 |0.009702940457837225  |0.07444353501228929   |76510 |
+|Sell-off / drawdown       |-0.07836690905659546  |-1.7465332964366085 |0.05336491989700171 |0.058905728431571776|-0.0820347053118587   |-0.08638440740617694  |49210 |
++--------------------------+----------------------+--------------------+--------------------+--------------------+----------------------+----------------------+------+
+
+Silhouette (KMeans overall): 0.586
+
+Per-cluster silhouette (approx via centroids)
+---------------------------------------------
++-----+------+------------------+
+|kpred|n     |mean_silhouette   |
++-----+------+------------------+
+|0    |127090|0.5687636812806223|
+|1    |142010|0.5862741127335472|
+|2    |2490  |0.531703282694356 |
+|3    |29910 |0.5416257265084347|
+|4    |32980 |0.5561639502548812|
++-----+------+------------------+
+
+[TIMING] Step 6 'Step 6 — Cluster characterization (centroids + silhouette)' completed in 18.98s → artifacts/ms5/X10/run_3/analysis_out/_timings.jsonl
+Predictive gauge — train=267,640, test=66,630, test positive-rate=0.503
+Baselines — Majority ACC=0.503, Always-Positive F1=0.670, Brier=0.249, proba1 q10/50/90=(0.451, 0.502, 0.545)
++-----+----------+-----+
+|label|prediction|count|
++-----+----------+-----+
+|0.0  |0.0       |16567|
+|0.0  |1.0       |16529|
+|1.0  |0.0       |14857|
+|1.0  |1.0       |18677|
++-----+----------+-----+
+
+Predictive gauge metrics — ROC AUC=0.545, PR AUC=0.547, ACC=0.529, P=0.531, R=0.557, F1=0.543
++----------+---------------------+
+|feature   |weight               |
++----------+---------------------+
+|ret_std_30|-3.383137882860303   |
+|ret_1d_w  |-2.2525170061783357  |
+|ret_std_7 |1.806352256768478    |
+|ma_gap_7  |-0.22640324411893664 |
+|ma_gap_30 |0.20839025685986087  |
+|zscore_7  |-0.018030827219811918|
++----------+---------------------+
+
++-----+-----+-----+-----+------------------+--------------------+------------------+--------------------+---------+
+|FN   |FP   |TN   |TP   |accuracy          |f1                  |precision         |recall              |threshold|
++-----+-----+-----+-----+------------------+--------------------+------------------+--------------------+---------+
+|0    |33096|0    |33534|0.5032868077442594|0.6695818857074398  |0.5032868077442594|1.0                 |0.1      |
+|0    |33096|0    |33534|0.5032868077442594|0.6695818857074398  |0.5032868077442594|1.0                 |0.2      |
+|0    |33096|0    |33534|0.5032868077442594|0.6695818857074398  |0.5032868077442594|1.0                 |0.3      |
+|443  |32550|546  |33091|0.504832657961879 |0.6673254348374086  |0.5041209000472265|0.986789527047176   |0.4      |
+|14857|16529|16567|18677|0.5289509230076542|0.5434099505382601  |0.5305061637220928|0.5569571181487446  |0.5      |
+|33207|233  |32863|327  |0.4981239681825004|0.019182260808353373|0.5839285714285715|0.009751297190910717|0.6      |
+|33534|4    |33092|0    |0.4966531592375807|0.0                 |0.0               |0.0                 |0.7      |
+|33534|0    |33096|0    |0.4967131922557407|0.0                 |0.0               |0.0                 |0.8      |
+|33534|0    |33096|0    |0.4967131922557407|0.0                 |0.0               |0.0                 |0.9      |
++-----+-----+-----+-----+------------------+--------------------+------------------+--------------------+---------+
+
+Best F1 @ threshold=0.10 → F1=0.670, P=0.503, R=1.000, ACC=0.503
+[TIMING] Step 7 'Step 7 — Predictive gauge' completed in 24.43s → artifacts/ms5/X10/run_3/analysis_out/_timings.jsonl

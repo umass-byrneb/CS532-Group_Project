@@ -1,0 +1,31 @@
+{
+  "rows": 33448,
+  "symbols": [
+    "AAVE",
+    "ADA",
+    "ATOM",
+    "BNB",
+    "BTC",
+    "CRO",
+    "DOGE",
+    "DOT",
+    "EOS",
+    "ETH",
+    "LINK",
+    "LTC",
+    "MIOTA",
+    "SOL",
+    "TRX",
+    "UNI",
+    "WBTC",
+    "XEM",
+    "XLM",
+    "XMR",
+    "XRP"
+  ],
+  "span": [
+    "2013-05-12",
+    "2021-07-06"
+  ],
+  "generated_at": "2025-10-29T02:56:09.843283+00:00"
+}

@@ -1,0 +1,29 @@
+regime,regime_next,count,row_count,prob
+Blow-off rally / parabolic,,8,4355,0.0018369690011481056
+Blow-off rally / parabolic,Blow-off rally / parabolic,812,4355,0.18645235361653273
+Blow-off rally / parabolic,Bull impulse,116,4355,0.02663605051664753
+Blow-off rally / parabolic,Calm / normal,1743,4355,0.4002296211251435
+Blow-off rally / parabolic,Choppy high-vol sideways,987,4355,0.22663605051664754
+Blow-off rally / parabolic,Sell-off / drawdown,689,4355,0.1582089552238806
+Bull impulse,Blow-off rally / parabolic,1,899,0.0011123470522803114
+Bull impulse,Bull impulse,576,899,0.6407119021134594
+Bull impulse,Calm / normal,5,899,0.0055617352614015575
+Bull impulse,Choppy high-vol sideways,242,899,0.26918798665183535
+Bull impulse,Sell-off / drawdown,75,899,0.08342602892102335
+Calm / normal,,9,15619,5.762212689672835E-4
+Calm / normal,Blow-off rally / parabolic,1936,15619,0.12395159741340675
+Calm / normal,Bull impulse,5,15619,3.2012292720404634E-4
+Calm / normal,Calm / normal,12109,15619,0.7752737051027595
+Calm / normal,Choppy high-vol sideways,29,15619,0.001856712977783469
+Calm / normal,Sell-off / drawdown,1531,15619,0.09802164030987899
+Choppy high-vol sideways,,4,7638,5.236973029588898E-4
+Choppy high-vol sideways,Blow-off rally / parabolic,826,7638,0.10814349306101073
+Choppy high-vol sideways,Bull impulse,183,7638,0.023959151610369208
+Choppy high-vol sideways,Calm / normal,330,7638,0.04320502749410841
+Choppy high-vol sideways,Choppy high-vol sideways,4745,7638,0.621235925634983
+Choppy high-vol sideways,Sell-off / drawdown,1550,7638,0.20293270489656978
+Sell-off / drawdown,Blow-off rally / parabolic,780,4916,0.15866558177379983
+Sell-off / drawdown,Bull impulse,17,4916,0.0034580960130187145
+Sell-off / drawdown,Calm / normal,1429,4916,0.29068348250610254
+Sell-off / drawdown,Choppy high-vol sideways,1623,4916,0.33014646053702196
+Sell-off / drawdown,Sell-off / drawdown,1067,4916,0.21704637917005695

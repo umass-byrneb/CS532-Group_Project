@@ -1,0 +1,6 @@
+regime,num_runs,mean_len,p50_len,p90_len,min_len,max_len
+Blow-off rally / parabolic,17715,1.2291843070843917,1,2,1,6
+Bull impulse,1615,2.7863777089783284,2,6,1,18
+Calm / normal,17550,4.450427350427351,3,10,1,46
+Choppy high-vol sideways,14485,2.641007939247497,2,6,1,18
+Sell-off / drawdown,19265,1.2771866078380483,1,2,1,6

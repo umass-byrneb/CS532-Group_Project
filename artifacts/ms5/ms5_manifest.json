@@ -1,0 +1,168 @@
+{
+  "predictions_path": "artifacts/ms4/predictions.parquet",
+  "features_ml_path": "artifacts/features_ml_daily",
+  "out_dir": "artifacts/ms5",
+  "steps": "1,2,3,4,5,6,7",
+  "selected_experiments": [
+    {
+      "id": "B0",
+      "desc": "Baseline: local[*], AQE ON, shuffle=200, broadcast=10MB, Kryo",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {},
+      "scale_factor": 1,
+      "notes": null
+    },
+    {
+      "id": "S1",
+      "desc": "Shuffle partitions \u2193 : 32",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "32",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {},
+      "scale_factor": 1,
+      "notes": null
+    },
+    {
+      "id": "S2",
+      "desc": "Shuffle partitions \u2191 : 800",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "800",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {},
+      "scale_factor": 1,
+      "notes": null
+    },
+    {
+      "id": "A1",
+      "desc": "AQE OFF",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "false",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {},
+      "scale_factor": 1,
+      "notes": null
+    },
+    {
+      "id": "J1",
+      "desc": "Broadcast join OFF",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "-1"
+      },
+      "env": {},
+      "scale_factor": 1,
+      "notes": null
+    },
+    {
+      "id": "R1",
+      "desc": "Serializer=Java (vs Kryo)",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.JavaSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {},
+      "scale_factor": 1,
+      "notes": null
+    },
+    {
+      "id": "G1",
+      "desc": "Whole-stage codegen OFF",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760",
+        "spark.sql.codegen.wholeStage": "false"
+      },
+      "env": {},
+      "scale_factor": 1,
+      "notes": null
+    },
+    {
+      "id": "C1",
+      "desc": "No caching in analysis code",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {
+        "MS4_DISABLE_CACHE": "1"
+      },
+      "scale_factor": 1,
+      "notes": "Requires ms4_analysis to read MS4_DISABLE_CACHE=1"
+    },
+    {
+      "id": "X5",
+      "desc": "Scale inputs \u00d75 (replicate symbols)",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {},
+      "scale_factor": 5,
+      "notes": null
+    },
+    {
+      "id": "X10",
+      "desc": "Scale inputs \u00d710 (replicate symbols)",
+      "master": "local[*]",
+      "spark_conf": {
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.sql.adaptive.enabled": "true",
+        "spark.sql.adaptive.coalescePartitions.enabled": "true",
+        "spark.sql.shuffle.partitions": "200",
+        "spark.sql.autoBroadcastJoinThreshold": "10485760"
+      },
+      "env": {},
+      "scale_factor": 10,
+      "notes": null
+    }
+  ],
+  "have_psutil": true,
+  "sampler_period_sec": 1.0,
+  "analysis_module": "src.ms4_analysis",
+  "enable_scaling": true,
+  "have_scale_deps": true,
+  "repeats": 3,
+  "generated_at": "2025-10-30T03:55:07.396053+00:00"
+}

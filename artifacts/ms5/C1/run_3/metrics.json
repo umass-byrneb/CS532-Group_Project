@@ -1,0 +1,38 @@
+{
+  "exp_id": "C1",
+  "desc": "No caching in analysis code",
+  "master": "local[*]",
+  "steps": "1,2,3,4,5,6,7",
+  "start_utc": "2025-10-30T04:13:12.262215+00:00",
+  "end_utc": "2025-10-30T04:13:54.970506+00:00",
+  "wall_seconds": 41.96054552702117,
+  "return_code": 0,
+  "spark_conf": {
+    "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+    "spark.sql.adaptive.enabled": "true",
+    "spark.sql.adaptive.coalescePartitions.enabled": "true",
+    "spark.sql.shuffle.partitions": "200",
+    "spark.sql.autoBroadcastJoinThreshold": "10485760"
+  },
+  "env": {
+    "MS4_DISABLE_CACHE": "1"
+  },
+  "pyspark_submit_args": "--master local[*] --conf spark.serializer=org.apache.spark.serializer.KryoSerializer --conf spark.sql.adaptive.enabled=true --conf spark.sql.adaptive.coalescePartitions.enabled=true --conf spark.sql.shuffle.partitions=200 --conf spark.sql.autoBroadcastJoinThreshold=10485760 pyspark-shell",
+  "have_psutil": true,
+  "run_idx": 3,
+  "scale_factor": 1,
+  "using_scaled": false,
+  "run_id": "C1_r3_c6c449",
+  "timings_path": "artifacts/ms5/C1/run_3/_timings.jsonl",
+  "max_rss_bytes": 3564343296.0,
+  "mean_cpu_percent": 6.685714285714286,
+  "num_samples": 42,
+  "step1_s": 4.3171089550014585,
+  "step2_s": 12.271195937006269,
+  "step3_s": 7.271474435983691,
+  "step4_s": 5.519921597006032,
+  "step5_s": 6.321257581032114,
+  "step6_s": 14.13857330600149,
+  "step7_s": 23.815483023005072,
+  "steps_sum_s": 73.65501483503613
+}

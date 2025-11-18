@@ -1,0 +1,29 @@
+regime,regime_next,count
+Calm / normal,Calm / normal,121090
+Choppy high-vol sideways,Choppy high-vol sideways,47450
+Calm / normal,Blow-off rally / parabolic,19360
+Blow-off rally / parabolic,Calm / normal,17430
+Sell-off / drawdown,Choppy high-vol sideways,16230
+Choppy high-vol sideways,Sell-off / drawdown,15500
+Calm / normal,Sell-off / drawdown,15310
+Sell-off / drawdown,Calm / normal,14290
+Sell-off / drawdown,Sell-off / drawdown,10670
+Blow-off rally / parabolic,Choppy high-vol sideways,9870
+Choppy high-vol sideways,Blow-off rally / parabolic,8260
+Blow-off rally / parabolic,Blow-off rally / parabolic,8120
+Sell-off / drawdown,Blow-off rally / parabolic,7800
+Blow-off rally / parabolic,Sell-off / drawdown,6890
+Bull impulse,Bull impulse,5760
+Choppy high-vol sideways,Calm / normal,3300
+Bull impulse,Choppy high-vol sideways,2420
+Choppy high-vol sideways,Bull impulse,1830
+Blow-off rally / parabolic,Bull impulse,1160
+Bull impulse,Sell-off / drawdown,750
+Calm / normal,Choppy high-vol sideways,290
+Sell-off / drawdown,Bull impulse,170
+Calm / normal,,90
+Blow-off rally / parabolic,,80
+Calm / normal,Bull impulse,50
+Bull impulse,Calm / normal,50
+Choppy high-vol sideways,,40
+Bull impulse,Blow-off rally / parabolic,10
