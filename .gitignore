@@ -1,2 +1,22 @@
-venv/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
 .venv/
+.env
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Project-specific
+artifacts/
+*.log
+*.tmp
