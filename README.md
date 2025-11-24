@@ -8,7 +8,7 @@ Vishal Garimella
 Sravanthi Machcha  
 Yuxin Zhang  
 
-## [Powerpoint Presentation](https://github.com/umass-byrneb/CS532-Group_Project/blob/main/CS%Final%20Project%20Presentation.pptx)
+## [CS 532 Final Project Presentation.pptx](https://github.com/umass-byrneb/CS532-Group_Project/blob/31ea8f132088ee0ca96d781fadff3925ab3e39b5/CS%20532%20Final%20Project%20Presentation.pptx)
 
 ## How to Run
 
@@ -71,5 +71,6 @@ Experiments:
 - G1 — Whole-stage codegen OFF.
 - C1 — No caching inside ms4_analysis.
 - X5/X10 — Scale dataset 5× / 10× by replicating symbols.
+
 
 
